@@ -1,0 +1,6 @@
+framework module Pods_HealthWealth {
+  umbrella header "Pods-HealthWealth-umbrella.h"
+
+  export *
+  module * { export * }
+}
