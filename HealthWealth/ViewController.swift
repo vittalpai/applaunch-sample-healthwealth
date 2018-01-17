@@ -28,12 +28,12 @@ class ViewController: UIViewController {
             let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashBoardView") as? DashBoardViewController
             
             
-            //            if accessToken.isAnonymous {
-            //                TokenStorageManager.sharedInstance.storeToken(token: accessToken.raw)
-            //            } else {
-            //                TokenStorageManager.sharedInstance.clearStoredToken()
-            //            }
-            //            TokenStorageManager.sharedInstance.storeUserId(userId: accessToken.subject)
+            if (accessToken?.isAnonymous)! {
+                TokenStorageManager.sharedInstance.storeToken(token: accessToken?.raw)
+            } else {
+                TokenStorageManager.sharedInstance.clearStoredToken()
+            }
+            TokenStorageManager.sharedInstance.storeUserId(userId: accessToken?.subject)
             
             DispatchQueue.main.async {
                 mainView?.present(afterLoginView!, animated: true, completion: nil)
@@ -49,13 +49,14 @@ class ViewController: UIViewController {
             print(error)
         }
     }
-    
-    @IBAction func log_in_anonymously(_ sender: Any) {
-        AppID.sharedInstance.loginAnonymously(accessTokenString: "token", authorizationDelegate: delegate())
+    @IBAction func login_anonymously(_ sender: AnyObject) {
+        let token = TokenStorageManager.sharedInstance.loadStoredToken()
+        AppID.sharedInstance.loginAnonymously(accessTokenString: token, authorizationDelegate: delegate())
     }
-    
+  
     @IBAction func log_in(_ sender: AnyObject) {
-        AppID.sharedInstance.loginWidget?.launch(accessTokenString: "token", delegate: delegate())
+        let token = TokenStorageManager.sharedInstance.loadStoredToken()
+        AppID.sharedInstance.loginWidget?.launch(accessTokenString: token, delegate: delegate())
         
     }
 

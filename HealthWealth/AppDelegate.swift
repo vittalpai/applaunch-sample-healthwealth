@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appid.initialize(tenantId: backendGUID, bluemixRegion: region)
         let appIdAuthorizationManager = AppIDAuthorizationManager(appid:appid)
         bmsclient.authorizationManager = appIdAuthorizationManager
+        TokenStorageManager.sharedInstance.initialize(tenantId: backendGUID)
         return true
     }
 

@@ -14,6 +14,7 @@
 		C75E995F200DEEB50065A76C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75E995E200DEEB50065A76C /* Assets.xcassets */; };
 		C75E9962200DEEB50065A76C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75E9960200DEEB50065A76C /* LaunchScreen.storyboard */; };
 		C75E996C200DF1770065A76C /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75E996B200DF1770065A76C /* DashBoardViewController.swift */; };
+		C7934E5C200F22E1005892EE /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E5B200F22E1005892EE /* TokenStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C75E9961200DEEB50065A76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C75E9963200DEEB50065A76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C75E996B200DF1770065A76C /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		C7934E5B200F22E1005892EE /* TokenStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
 		E3541C1EE534DE133F972AA6 /* Pods_HealthWealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthWealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1447A880DB6BBA13759CC32 /* Pods-HealthWealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthWealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthWealth/Pods-HealthWealth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,11 +75,12 @@
 			children = (
 				C75E9957200DEEB50065A76C /* AppDelegate.swift */,
 				C75E9959200DEEB50065A76C /* ViewController.swift */,
+				C75E996B200DF1770065A76C /* DashBoardViewController.swift */,
+				C7934E5B200F22E1005892EE /* TokenStorage.swift */,
 				C75E995B200DEEB50065A76C /* Main.storyboard */,
 				C75E995E200DEEB50065A76C /* Assets.xcassets */,
 				C75E9960200DEEB50065A76C /* LaunchScreen.storyboard */,
 				C75E9963200DEEB50065A76C /* Info.plist */,
-				C75E996B200DF1770065A76C /* DashBoardViewController.swift */,
 			);
 			path = HealthWealth;
 			sourceTree = "<group>";
@@ -172,12 +175,14 @@
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/BluemixAppID/BluemixAppID.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCloudant/SwiftCloudant.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BluemixAppID.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCloudant.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -227,6 +232,7 @@
 				C75E996C200DF1770065A76C /* DashBoardViewController.swift in Sources */,
 				C75E995A200DEEB50065A76C /* ViewController.swift in Sources */,
 				C75E9958200DEEB50065A76C /* AppDelegate.swift in Sources */,
+				C7934E5C200F22E1005892EE /* TokenStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,79 +3,107 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00A66B48FF1D72BC33B0595ABF603F13 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 9D2AADFA9066FFE0711E2367B3C02340 /* module.modulemap */; };
-		01B64375B61C1BD50F48328E08D9A227 /* BMSAnalyticsAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F0D832AB2AF0A15363490A1F740131 /* BMSAnalyticsAPI-dummy.m */; };
-		0304250DBC6485E603DC5A9D2E1BEB96 /* BMSURLSessionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1936CF9771525D2370E6DF73078F58E7 /* BMSURLSessionUtility.swift */; };
-		08CD3BF749B81923B5FC9E485939BD93 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B97E0C5DF2EC93D3CDCE4D6B8CC590 /* AccessToken.swift */; };
-		0F2736DD5027F8DFA0F92670DE5B3A07 /* UserAttributeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD0745AB42CE2D81D9E53C447A068FB /* UserAttributeManager.swift */; };
-		11DAC782DAFA171759CF78E069E32F12 /* BaseUserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421425900C1DF89F3F6032863A93F68 /* BaseUserIdentity.swift */; };
-		13E5EFDF5F7CA9F3AF5835C5ECA4E15D /* TokenResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44995E7D9C46E5E29F542200C36B2B7C /* TokenResponseDelegate.swift */; };
-		14C53B6011A564EF075535219031273A /* IdentityTokenImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56BE780EEC0D7BEC824C0DBE45F6A1 /* IdentityTokenImpl.swift */; };
+		00A66B48FF1D72BC33B0595ABF603F13 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 3691D9FA9721D0D56968283F51CF1AF9 /* module.modulemap */; };
+		01B64375B61C1BD50F48328E08D9A227 /* BMSAnalyticsAPI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F387058B085A0A7455D1EFFE71E08A1 /* BMSAnalyticsAPI-dummy.m */; };
+		0304250DBC6485E603DC5A9D2E1BEB96 /* BMSURLSessionUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B4992CEA76860AA6ECA5FC2EA36C4 /* BMSURLSessionUtility.swift */; };
+		03E95D9F57DA08F2B1B85DF10AA90690 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C819FEA1D050ACC0B6557D4BCEF8B0 /* RequestBuilder.swift */; };
+		08364F95B4C847D69FC9CD067AB92A02 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0707C6C0CFC6722199DF9F3A3A1DA4F /* RequestExecutor.swift */; };
+		08CD3BF749B81923B5FC9E485939BD93 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA101327A87AC3A6377BC99965A9B0A1 /* AccessToken.swift */; };
+		0F2736DD5027F8DFA0F92670DE5B3A07 /* UserAttributeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941648E97F8D54AF8CAE0C8A63378B1F /* UserAttributeManager.swift */; };
+		11DAC782DAFA171759CF78E069E32F12 /* BaseUserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ED64DAE70918052B4EC23D39EA6DF1 /* BaseUserIdentity.swift */; };
+		13E5EFDF5F7CA9F3AF5835C5ECA4E15D /* TokenResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6716213CC980F3E8B5631AAEF100C89 /* TokenResponseDelegate.swift */; };
+		14C53B6011A564EF075535219031273A /* IdentityTokenImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4008C74518659A7B4D443AF58F76D3B2 /* IdentityTokenImpl.swift */; };
+		1AE9C4E1A573CACE5924C871A22A5F97 /* DeleteAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF9EEE8C530429031497403A65BBA7 /* DeleteAttachmentOperation.swift */; };
 		23887E83C3A1AC7187588D8BC39CB3E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA73907A8D18B7F341020F342BAD45 /* Foundation.framework */; };
-		27BFE9FF5F689A4A794E34EE23752857 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B09329901CDE1FBD5EE89E0C7D922 /* Error.swift */; };
-		2E18A111F7094C848FF85B6A26916DA7 /* AuthorizationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4465296C7B506E466843F385D344F091 /* AuthorizationError.swift */; };
+		23BE41ED16C4FDCBA62C8556B5531415 /* DeleteQueryIndexOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFD42193A598F21BB4DBCC97DD2FC65 /* DeleteQueryIndexOperation.swift */; };
+		27BFE9FF5F689A4A794E34EE23752857 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A616F058CC9D24BBF588593D62B9AA0D /* Error.swift */; };
+		2D1178408A3E435BE4E5FC2C9336A281 /* SwiftCloudant-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A5F59628BB0AFEFDE03FF940EB266B /* SwiftCloudant-dummy.m */; };
+		2E18A111F7094C848FF85B6A26916DA7 /* AuthorizationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BF42722B28E55753004B4A9639FBC4 /* AuthorizationError.swift */; };
 		2E6EE57FC1B97B2EF0AB1D910B9E542C /* BMSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98CB55F18A67CBFAE7DC6A1C87755273 /* BMSCore.framework */; };
-		31402229B5FBD9D07DC6C90F17C7D8E1 /* BaseAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D340D0BFD9418255A4FCBCC88A047 /* BaseAuthorizationManager.swift */; };
-		352562821AAB8172ED35688A8C17D93C /* AccessTokenImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D286C092FAEFDDCEF36D3FC4096B2BB7 /* AccessTokenImpl.swift */; };
-		38A6B682DDFFAA2B07B7DC62B0476AC0 /* AuthorizationUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424E9AEFE7896BCD6897526F3871D80F /* AuthorizationUIManager.swift */; };
-		3955D01BE1DAACFC0BA8EE6BDDC08720 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB161594992E606A53FF9B7F3629813 /* BaseRequest.swift */; };
-		398CDE439D89460DA7017614F736EABD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08ADF2B628BB9725CE4C06D5BDBB85A /* Logger.swift */; };
-		3EBBF8B8289F5F65874FA1A84297E1DF /* AuthorizationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE484B6BB069F1814C279E47DDC9396 /* AuthorizationDelegate.swift */; };
-		430E053FA405C72E3A2CEF7A3A5A4E1C /* UserAttributeManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87973B093A465CFB89D2DB1C37A58CA2 /* UserAttributeManagerImpl.swift */; };
-		46DEDFBAB0DA8C5FFD39FDD562953248 /* BMSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A510537ACC19BE7BDA9B0DB36E2268 /* BMSClient.swift */; };
+		3071B86483EE39019C6CB4E3AD20A5C1 /* QueryViewOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F3FFDC3E56AD4CF869D2F78BC1D1A /* QueryViewOperation.swift */; };
+		31402229B5FBD9D07DC6C90F17C7D8E1 /* BaseAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A52623AAD104E68EB90CA5A6C6B17 /* BaseAuthorizationManager.swift */; };
+		343898900C0D885A4CAE36D61870282D /* CouchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0BEE3D6CAEA379FE8ED0D07076765B /* CouchClient.swift */; };
+		352562821AAB8172ED35688A8C17D93C /* AccessTokenImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C55C662997F89564C7891BF21DA89C /* AccessTokenImpl.swift */; };
+		37848059CFB4F261DD2B3609F85C78DB /* BulkDocs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1967C5558EB391D51351673367A19C /* BulkDocs.swift */; };
+		38A6B682DDFFAA2B07B7DC62B0476AC0 /* AuthorizationUIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB089AFA8D78B7A4161A1456AADB9BC /* AuthorizationUIManager.swift */; };
+		3955D01BE1DAACFC0BA8EE6BDDC08720 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D16CC6222C2353AD2A61EE8A4A6C9DB /* BaseRequest.swift */; };
+		398CDE439D89460DA7017614F736EABD /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7762D39DF3F8CC01BEE89726F9E0B929 /* Logger.swift */; };
+		3EBBF8B8289F5F65874FA1A84297E1DF /* AuthorizationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA49C5D856400E2CA010F9E39DE8D38 /* AuthorizationDelegate.swift */; };
+		430E053FA405C72E3A2CEF7A3A5A4E1C /* UserAttributeManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5519B00D894CF31C45742B51E22866 /* UserAttributeManagerImpl.swift */; };
+		46DEDFBAB0DA8C5FFD39FDD562953248 /* BMSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B98C5335032CCF227CE4639846452E8 /* BMSClient.swift */; };
+		477505E99010252D26FA5A2DD4E19801 /* GetAllDocsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D27316C269017D0A5101D68338920B4 /* GetAllDocsOperation.swift */; };
+		47DBBE989E27D230CEF803DC6804EF00 /* DeleteDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D76E3316DB0D70FFF290656EF01A2E /* DeleteDocumentOperation.swift */; };
+		4B2063DFA19039A4ED4FCC389049ECA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA73907A8D18B7F341020F342BAD45 /* Foundation.framework */; };
 		51FA6ADA51F72B1A2E2821AEC4FE1B14 /* BMSAnalyticsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BED12742B7FCB30E548F85FBF23D4F /* BMSAnalyticsAPI.framework */; };
-		5A588E2CB585416C3DA61EF2F42A8645 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC4DDC79F75FA2B75C66B7B5CCF832 /* Response.swift */; };
-		5A96E66D0879F99752B7C9FC7C7EF5C1 /* DeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000F8D6A1BB60A3BE900912B197713 /* DeviceIdentity.swift */; };
-		5DB61F4592695B0BFF8ED4421B2BC252 /* BaseDeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B9785CB927A9491886A541A674994 /* BaseDeviceIdentity.swift */; };
-		6142BA13555899228B218AC7B25B6BFD /* LoginWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C5755A18F6BAC8DCACA95742CFCDE /* LoginWidget.swift */; };
-		66FFF94DE1A29ECB4B9CA41C5BB5735E /* BluemixAppID-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F25AB926644816D5F99D83711D87FC4 /* BluemixAppID-dummy.m */; };
-		6984397C797A8B15859CD40FDDE0A2F0 /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2E924FF04ED83C46F46673904C6A9 /* OAuthManager.swift */; };
-		6A68D2B4E0023320783FA0D81B524CE7 /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D407E2D605FEA0E98AC56647265AA9 /* UserIdentity.swift */; };
-		71A34C1658503C2589CCDB96F498C9EA /* BMSCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D09F1AAA0F8E7235508BA457C7A7C6 /* BMSCore-dummy.m */; };
+		5A06AB5117DD455665689F7424001AB1 /* CreateQueryIndexOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E889D3F9106A99A68405138ACE83B0 /* CreateQueryIndexOperation.swift */; };
+		5A588E2CB585416C3DA61EF2F42A8645 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99633AD023F75E7E0D991B85002CF3 /* Response.swift */; };
+		5A96E66D0879F99752B7C9FC7C7EF5C1 /* DeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392FED3AC87E49EAE37C2E94F0ED4A3 /* DeviceIdentity.swift */; };
+		5DB61F4592695B0BFF8ED4421B2BC252 /* BaseDeviceIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D579EBF911029B858408C0011766F51 /* BaseDeviceIdentity.swift */; };
+		6142BA13555899228B218AC7B25B6BFD /* LoginWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC08EFA67A0FD02974DB86A029095086 /* LoginWidget.swift */; };
+		66FFF94DE1A29ECB4B9CA41C5BB5735E /* BluemixAppID-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8708B1BEC5C602B731797021BB86506B /* BluemixAppID-dummy.m */; };
+		6984397C797A8B15859CD40FDDE0A2F0 /* OAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63191E5FCEFAC65ED4DF6AF3E805EFA0 /* OAuthManager.swift */; };
+		6A68D2B4E0023320783FA0D81B524CE7 /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FAA3CA8FBB06DF31F951EF826A17AA /* UserIdentity.swift */; };
+		7029BAF337D56854E52CFE9B30C0CE38 /* CreateDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAC47C43E8BFBDA92D131CC3211B785 /* CreateDatabaseOperation.swift */; };
+		71A34C1658503C2589CCDB96F498C9EA /* BMSCore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDC1CCF45A91A1048DF75A9155452F8 /* BMSCore-dummy.m */; };
 		7A148A776DD1D14DB842E50FEE25D18E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA73907A8D18B7F341020F342BAD45 /* Foundation.framework */; };
-		7A525D4DCE81E86BBD10BDF0F39F0894 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8CDE70E29806920370C1C7B46E628 /* Utils.swift */; };
-		84E43E686DFCB4FA82F327A342738724 /* BluemixAppID.h in Headers */ = {isa = PBXBuildFile; fileRef = FD21B305C7CE78AE14D5D9225C3FD28A /* BluemixAppID.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E8BF007B1ADE6C969CBD019D5BE4C39 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82259729AD311D8BE375788FB1C8868D /* Request.swift */; };
-		90CAEB33784F1B01FEB29C5C66A7D8D7 /* BluemixAppID-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AFF116AABE8E92D68EF11A2B4FE3E87 /* BluemixAppID-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		918BEC9B4F2D4F0EC89D640C4B125B36 /* LoginWidgetImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E536BEF214C145BEDAC9F0E7841DA85B /* LoginWidgetImpl.swift */; };
-		9BA68D42314BDF9D8792C2A447022826 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA73907A8D18B7F341020F342BAD45 /* Foundation.framework */; };
-		9BE4A68BC5F6E65286CBF0276113D872 /* BMSURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A63DBA9D80EC7798F945E946C2468 /* BMSURLSessionDelegate.swift */; };
-		9F5C9F59A5E3864BC384180AF36FA734 /* AuthorizationHeaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A855238ABE3CBDAD28608D27E4989 /* AuthorizationHeaderHelper.swift */; };
-		9FEF8883188D55BE40F4A0C75D274814 /* Pods-HealthWealth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 846DAF4F4D88AFBDD1B3BAFAD6FE0CAA /* Pods-HealthWealth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A050B557BF529E1EE68A04685B663957 /* AbstractToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B5D3DCD5D3F48BE446A51887BC4579 /* AbstractToken.swift */; };
-		A134AE1EC575DE28CA123BC08B7CDD04 /* AppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA7E3C555B09D2D46F42CCABBECD71E /* AppID.swift */; };
-		A910825FE22E2A5A10916B62308B0807 /* Pods-HealthWealth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 758F3F5DAAAAEFDE1192F466FD2FDFCE /* Pods-HealthWealth-dummy.m */; };
-		AACAB68098972A9D919C7A6BA4CC1274 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BAE74CE3A4E11D7445438DFBB9332 /* TokenManager.swift */; };
-		ABA8E373D86EFDB71016F84B5DB2C4CC /* BMSAnalyticsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 094AA0EE93098BD8F0BDB922F3D0AF66 /* BMSAnalyticsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACC6E4D1707C9ADA6FD7C88B806CC4F0 /* safariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C506BE9F8B80815DBDFCA95E62E902 /* safariView.swift */; };
-		ADD1AE1A72FE5C86C11E42A481DB32B3 /* AppIDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0D6B3053CDE805AC2EC60ADC8599D4 /* AppIDError.swift */; };
-		AFF30BB31FD05A43606ABEF3FA2C00B5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E69504AC195FE970D28639D8BE7FB /* Config.swift */; };
-		B1FC7567C90381812BE51619A3B20863 /* StringPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8A8557F07CF3659411D89800BF958 /* StringPreference.swift */; };
-		B7C220E17B6D6E56B4F7D93598974AE7 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AAED8FFDCBE67A1D378B3199957BB1 /* AuthorizationManager.swift */; };
-		BB0DDBA8F6F39D41FEF2D12143C8FFB6 /* BMSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 2887E848972212F04E33E03EC6C6207E /* BMSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BCDA60C629DFE3AA5A63ECCAFFC4BEAB /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAAE91E5EE47D0E2BC551E85B008086 /* AuthorizationManager.swift */; };
-		C31C6C61818EA8EB4302ACFB8F5A88D7 /* OAuthClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658E0BDBB4D0DDAF87A9DD2642638D8 /* OAuthClientImpl.swift */; };
-		C3B7D45004767486BCC6294F2A7EB3A5 /* IdentityToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9882FFA926190833AF688E664F4304 /* IdentityToken.swift */; };
-		C5953A03B7474BAF3094E70A93C2BC2E /* AppIDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3703FFC45F407214D2F3F043E9F4E8 /* AppIDConstants.swift */; };
-		CD15D0CCD5567004421465283C55BD06 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12660DEA816C8BEE9B32DEE46121AE31 /* Analytics.swift */; };
-		CE372CD7FD23AA4407F317D1023CA638 /* SecurityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AFF7473AB7492FC6D2CC3F519919C4 /* SecurityUtils.swift */; };
-		CF5A03C91EDAD480350B0C738E9591C1 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D31D725656EEA20FE86A7B718FDC62 /* OAuthClient.swift */; };
-		D188EE0DB52EFF25B9FDB7127ADC8F96 /* BMSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97430B573F2D9C6C13CB00BB18EFEF3B /* BMSURLSession.swift */; };
-		E0E62ACC0E8A496B5573EA72A5145DB6 /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF28DC10F31F56339DCA1F5CC110DDD /* RegistrationManager.swift */; };
-		E8421C4195BD12157DECB26971181C0E /* UserAttributeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1941D15FB0698A7047C555FCE2762E23 /* UserAttributeError.swift */; };
-		E97B4384239C104BAF1FCDE618A4BB4C /* JSONPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960FE8D96EB36D03D9D98BBD431DDC31 /* JSONPreference.swift */; };
-		E990B4F9A0C8DF8B6D459B7ECBDAE6AA /* AppIDAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01BCB75F96FD54EF55CADFCC58CF96D /* AppIDAuthorizationManager.swift */; };
-		ECA6FF379F4F166434BF7928ACB158CE /* BaseAppIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE043E3E51A5F3A1D53E2624C5D110 /* BaseAppIdentity.swift */; };
-		F04AD15D5FA5C2AF0E0DBD043C21AD53 /* RequestMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB1573040216A6B65CF54718384B08 /* RequestMetadata.swift */; };
+		7A525D4DCE81E86BBD10BDF0F39F0894 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3893B4A809F5CA0548EBA670FE64196 /* Utils.swift */; };
+		7B0AB32734E7D55B8FE9CD11FB7F34B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA73907A8D18B7F341020F342BAD45 /* Foundation.framework */; };
+		8006460864B78303AEAB264B77D0F06D /* GetChangesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB290C4D7DCB469F1579FE9DD412DC2 /* GetChangesOperation.swift */; };
+		81A156240B45CDD77DF2D57D8AB38F1F /* GetDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824C6AB888F17947AC26BDBBD6CCC564 /* GetDocumentOperation.swift */; };
+		84E43E686DFCB4FA82F327A342738724 /* BluemixAppID.h in Headers */ = {isa = PBXBuildFile; fileRef = B52EB2C5C1B16FE072DD7B1C36D8B618 /* BluemixAppID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A881CD51BEF2CA639171C8294A4B2B5 /* DeleteDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD59ED4DB6112F43E1AA9B5EE225AD43 /* DeleteDatabaseOperation.swift */; };
+		8B9A1E438C5427522D90F24AEA4F9D52 /* PutAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D45B0B0BCF757A2309BDD7CB677E88F /* PutAttachmentOperation.swift */; };
+		8CE2BC7F714FA7DAABB795455DC1F4FC /* Pods-HealthWealth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 758F3F5DAAAAEFDE1192F466FD2FDFCE /* Pods-HealthWealth-dummy.m */; };
+		8E8BF007B1ADE6C969CBD019D5BE4C39 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204906339232229DF1C5FCCBD8007E93 /* Request.swift */; };
+		90CAEB33784F1B01FEB29C5C66A7D8D7 /* BluemixAppID-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B202E7E20AB4DC7619CF446BD0BA8C37 /* BluemixAppID-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		918BEC9B4F2D4F0EC89D640C4B125B36 /* LoginWidgetImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4330DE48683F6C700533019D6EF9D22 /* LoginWidgetImpl.swift */; };
+		9BE4A68BC5F6E65286CBF0276113D872 /* BMSURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E78EF4AFCC39001DD30DA61E3F8A2B7 /* BMSURLSessionDelegate.swift */; };
+		9F5C9F59A5E3864BC384180AF36FA734 /* AuthorizationHeaderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2829CF8F8B6F0E05B3C5822B212FBB5 /* AuthorizationHeaderHelper.swift */; };
+		A050B557BF529E1EE68A04685B663957 /* AbstractToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60373B2786E5363E59DE0B14EEB1C000 /* AbstractToken.swift */; };
+		A134AE1EC575DE28CA123BC08B7CDD04 /* AppID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3E5CB6FC48B129DFA4E4D11C6B06D9 /* AppID.swift */; };
+		A76089C82DD165F71E7C87FBDF7E2573 /* GetAllDatabasesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656F69865CC1B38D34258F2FCFFEB4EF /* GetAllDatabasesOperation.swift */; };
+		AACAB68098972A9D919C7A6BA4CC1274 /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D5B262C2B8AC29E8D1E175B40C645B /* TokenManager.swift */; };
+		ABA8E373D86EFDB71016F84B5DB2C4CC /* BMSAnalyticsAPI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE77343169D9547A755119B09F59E8A0 /* BMSAnalyticsAPI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACC6E4D1707C9ADA6FD7C88B806CC4F0 /* safariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A581AF4F66841A022C4ABDADF2FB7BF /* safariView.swift */; };
+		ADD1AE1A72FE5C86C11E42A481DB32B3 /* AppIDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79678B90F463524D13E10EB4E013B21D /* AppIDError.swift */; };
+		AFF30BB31FD05A43606ABEF3FA2C00B5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62B5C6CED9958855B3540E703D96500 /* Config.swift */; };
+		B1FC7567C90381812BE51619A3B20863 /* StringPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F8658CB85D2065818D3C3ED03E83F /* StringPreference.swift */; };
+		B7C220E17B6D6E56B4F7D93598974AE7 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A3C24A062E875C8028F72881AD05DC /* AuthorizationManager.swift */; };
+		BB0DDBA8F6F39D41FEF2D12143C8FFB6 /* BMSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E74B767C5819E49B898958E268236C /* BMSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCDA60C629DFE3AA5A63ECCAFFC4BEAB /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE1FA5C7E8EFA1413F0D081E956E320 /* AuthorizationManager.swift */; };
+		C31C6C61818EA8EB4302ACFB8F5A88D7 /* OAuthClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0913FDBA121215F72A70225E7721ED9 /* OAuthClientImpl.swift */; };
+		C3B7D45004767486BCC6294F2A7EB3A5 /* IdentityToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209D227CD1524CDFDCA5F9ED1FB8E561 /* IdentityToken.swift */; };
+		C5953A03B7474BAF3094E70A93C2BC2E /* AppIDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8721E6BC778946720DEA769AF0A1DB /* AppIDConstants.swift */; };
+		C66FF38D500D641275501095FCDFC53C /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4451B66F629B6E583A4202E3498A9747 /* URLSession.swift */; };
+		C90273AD5B9E3ACA6D7477C20E22EC7D /* ViewPaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B10EAD71A0A30E5BF7E56F122737A7 /* ViewPaging.swift */; };
+		CD15D0CCD5567004421465283C55BD06 /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297DF9292D0032ED327832096D5F684D /* Analytics.swift */; };
+		CE372CD7FD23AA4407F317D1023CA638 /* SecurityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D20787D3F8B70567551B424A52D8CB9 /* SecurityUtils.swift */; };
+		CF5A03C91EDAD480350B0C738E9591C1 /* OAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FEB598D0216218F6C93203DC8C1EB8 /* OAuthClient.swift */; };
+		D0CAC4247CB811A35742507803686843 /* Pods-HealthWealth-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 846DAF4F4D88AFBDD1B3BAFAD6FE0CAA /* Pods-HealthWealth-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D188EE0DB52EFF25B9FDB7127ADC8F96 /* BMSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208CA6F7578A03447A6B66A1F718B5B9 /* BMSURLSession.swift */; };
+		D3A49B31867EAFD8506F57BF9DBC19DB /* SwiftCloudant-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C47E709A1C84EAEB419661BB1F50E38D /* SwiftCloudant-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC508D043A9DD49DD373C0FAB2FF39C8 /* ViewLikeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE2CA15CA69BF1BECF4BD21836A5F5 /* ViewLikeOperation.swift */; };
+		DFCA03F7AD37D8C088524112330D1FFD /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE26138173610B881F92F8B7E09AA0A /* Operation.swift */; };
+		E0E62ACC0E8A496B5573EA72A5145DB6 /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B8B2E9E57A3B0BF44B3DF6D444609C /* RegistrationManager.swift */; };
+		E30247F697759F81813E27449CB4BCA6 /* CouchDatabaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B76FC9EBD08A9681BF9A0A02635112C /* CouchDatabaseOperation.swift */; };
+		E8421C4195BD12157DECB26971181C0E /* UserAttributeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE225F125760F75F3B66FD81F4A824D /* UserAttributeError.swift */; };
+		E97B4384239C104BAF1FCDE618A4BB4C /* JSONPreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842C94AB5646615AC2B050868681AE59 /* JSONPreference.swift */; };
+		E990B4F9A0C8DF8B6D459B7ECBDAE6AA /* AppIDAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA08DF70C8622AE9E062C3579A335B7 /* AppIDAuthorizationManager.swift */; };
+		EAC3F9FD8192AB0F274CF2E50205CB11 /* OperationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA055B5005FFE611848CECABECC8A98 /* OperationProtocols.swift */; };
+		ECA6FF379F4F166434BF7928ACB158CE /* BaseAppIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F59C3B18DFDEC988F9F0B7B26F56A9 /* BaseAppIdentity.swift */; };
+		EE5EAB61B7E5F4A65DE038B358410F79 /* FindDocumentsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88593744195B549CA45062D9A887AC5A /* FindDocumentsOperation.swift */; };
+		EF487120F571D1406DC33B78F29C6693 /* ReadAttachmentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44561BFB9474AED1CBDDA12236A8F379 /* ReadAttachmentOperation.swift */; };
+		F04AD15D5FA5C2AF0E0DBD043C21AD53 /* RequestMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EF34ED5FDD2CCC4E71C192B457A817 /* RequestMetadata.swift */; };
 		F3B289AC44D5F758F0F2F8EB226C3CF6 /* BMSAnalyticsAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BED12742B7FCB30E548F85FBF23D4F /* BMSAnalyticsAPI.framework */; };
+		F6454352B5800BA16FEFED5F4B86C671 /* PutDocumentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C55C7E4B2AB2AD576AFD13B34ACD656 /* PutDocumentOperation.swift */; };
 		F8652F830154F999673849FC0965984C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DA73907A8D18B7F341020F342BAD45 /* Foundation.framework */; };
-		F9777DF16EEF4254D9DB1BDC07040CD4 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF01C9D62E168002918B86F97C317353 /* PreferenceManager.swift */; };
-		FB5ECC6F5574A30B8614B36131C5E876 /* AppIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4355C16CB9CA592973ABD5CFDF0F6DDB /* AppIdentity.swift */; };
-		FDBA2A5F507ED44E97300299622AFD43 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64FA2175F12741AC12310C84DAE3DA0 /* NetworkMonitor.swift */; };
+		F9777DF16EEF4254D9DB1BDC07040CD4 /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67A13A180BF7A47024CDAD499AD9EE /* PreferenceManager.swift */; };
+		FB5ECC6F5574A30B8614B36131C5E876 /* AppIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCAF8135CD664F307ECFE34FF0963A4 /* AppIdentity.swift */; };
+		FDBA2A5F507ED44E97300299622AFD43 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E8E15FF7624E0C8C8EEB8FB27F9686 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,14 +114,7 @@
 			remoteGlobalIDString = 5266477420DD84DA13C3AAAD5B8DD90C;
 			remoteInfo = BMSAnalyticsAPI;
 		};
-		2FD924572E9E67ACF7767727055FA6D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5266477420DD84DA13C3AAAD5B8DD90C;
-			remoteInfo = BMSAnalyticsAPI;
-		};
-		476547F9C35E5FEAA118747E8BE527D5 /* PBXContainerItemProxy */ = {
+		26D971EF6ED583797710A387539CDC75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -114,7 +135,21 @@
 			remoteGlobalIDString = 4100EF12FB42CBD16C06640C93C8A575;
 			remoteInfo = BMSCore;
 		};
-		83919C7FAC37D87FD1CB1373807A8DC0 /* PBXContainerItemProxy */ = {
+		982AAEBBFE032EF95833505772ED8FD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27F123B35797829920287A573E421A59;
+			remoteInfo = SwiftCloudant;
+		};
+		B72DC764F1E1867A01686FFD74796557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5266477420DD84DA13C3AAAD5B8DD90C;
+			remoteInfo = BMSAnalyticsAPI;
+		};
+		F4BBCB0C5C2120860AEE2479E23A2A6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -124,107 +159,131 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		045B9785CB927A9491886A541A674994 /* BaseDeviceIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseDeviceIdentity.swift; path = Source/Security/Identity/BaseDeviceIdentity.swift; sourceTree = "<group>"; };
-		05B97E0C5DF2EC93D3CDCE4D6B8CC590 /* AccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = Source/BluemixAppID/api/Tokens/AccessToken.swift; sourceTree = "<group>"; };
-		094AA0EE93098BD8F0BDB922F3D0AF66 /* BMSAnalyticsAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSAnalyticsAPI-umbrella.h"; sourceTree = "<group>"; };
-		0A56BE780EEC0D7BEC824C0DBE45F6A1 /* IdentityTokenImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentityTokenImpl.swift; path = Source/BluemixAppID/internal/tokens/IdentityTokenImpl.swift; sourceTree = "<group>"; };
-		0B6E69504AC195FE970D28639D8BE7FB /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Source/BluemixAppID/internal/Config.swift; sourceTree = "<group>"; };
-		111BAE74CE3A4E11D7445438DFBB9332 /* TokenManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenManager.swift; path = Source/BluemixAppID/internal/TokenManager.swift; sourceTree = "<group>"; };
-		12660DEA816C8BEE9B32DEE46121AE31 /* Analytics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Analytics.swift; path = Source/Analytics.swift; sourceTree = "<group>"; };
+		00DFD64278CA1BCBD25F3ACECA4B4C63 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D76E3316DB0D70FFF290656EF01A2E /* DeleteDocumentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteDocumentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/DeleteDocumentOperation.swift; sourceTree = "<group>"; };
+		03C2945E38164FDC20FA6E740DE558DF /* BMSCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSCore-prefix.pch"; sourceTree = "<group>"; };
+		03E889D3F9106A99A68405138ACE83B0 /* CreateQueryIndexOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CreateQueryIndexOperation.swift; path = Source/SwiftCloudant/Operations/Query/CreateQueryIndexOperation.swift; sourceTree = "<group>"; };
+		07F59C3B18DFDEC988F9F0B7B26F56A9 /* BaseAppIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseAppIdentity.swift; path = Source/Security/Identity/BaseAppIdentity.swift; sourceTree = "<group>"; };
+		0B8A52623AAD104E68EB90CA5A6C6B17 /* BaseAuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseAuthorizationManager.swift; path = Source/Security/BaseAuthorizationManager.swift; sourceTree = "<group>"; };
+		0C55C7E4B2AB2AD576AFD13B34ACD656 /* PutDocumentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PutDocumentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/PutDocumentOperation.swift; sourceTree = "<group>"; };
+		0E99633AD023F75E7E0D991B85002CF3 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = "Source/Network Requests/Response.swift"; sourceTree = "<group>"; };
+		0F387058B085A0A7455D1EFFE71E08A1 /* BMSAnalyticsAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BMSAnalyticsAPI-dummy.m"; sourceTree = "<group>"; };
 		13961270C3A37EE41195F15DE4B86440 /* Pods-HealthWealth-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HealthWealth-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1936CF9771525D2370E6DF73078F58E7 /* BMSURLSessionUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSessionUtility.swift; path = "Source/Network Requests/BMSURLSessionUtility.swift"; sourceTree = "<group>"; };
-		1941D15FB0698A7047C555FCE2762E23 /* UserAttributeError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserAttributeError.swift; path = Source/BluemixAppID/api/UserAttributeError.swift; sourceTree = "<group>"; };
-		1F9C1851BEB157BEFB0AD18FD1B0F851 /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BMSAnalyticsAPI.framework; path = BMSAnalyticsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FCFD87B99732841345A30A418AE63C0 /* BMSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BMSCore.framework; path = BMSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2156E0400708E1A4FD093B8C35382658 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		261A855238ABE3CBDAD28608D27E4989 /* AuthorizationHeaderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationHeaderHelper.swift; path = Source/BluemixAppID/internal/AuthorizationHeaderHelper.swift; sourceTree = "<group>"; };
-		270A63DBA9D80EC7798F945E946C2468 /* BMSURLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSessionDelegate.swift; path = "Source/Network Requests/BMSURLSessionDelegate.swift"; sourceTree = "<group>"; };
-		2887E848972212F04E33E03EC6C6207E /* BMSCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMSCore.h; path = Source/Resources/BMSCore.h; sourceTree = "<group>"; };
-		2AFF116AABE8E92D68EF11A2B4FE3E87 /* BluemixAppID-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BluemixAppID-umbrella.h"; sourceTree = "<group>"; };
-		318D340D0BFD9418255A4FCBCC88A047 /* BaseAuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseAuthorizationManager.swift; path = Source/Security/BaseAuthorizationManager.swift; sourceTree = "<group>"; };
-		3421425900C1DF89F3F6032863A93F68 /* BaseUserIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseUserIdentity.swift; path = Source/Security/Identity/BaseUserIdentity.swift; sourceTree = "<group>"; };
-		38C506BE9F8B80815DBDFCA95E62E902 /* safariView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = safariView.swift; path = Source/BluemixAppID/internal/safariView.swift; sourceTree = "<group>"; };
-		4098FE4B168CB02FA6A375D673F79CEE /* BluemixAppID.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BluemixAppID.modulemap; sourceTree = "<group>"; };
-		424E9AEFE7896BCD6897526F3871D80F /* AuthorizationUIManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationUIManager.swift; path = Source/BluemixAppID/internal/AuthorizationUIManager.swift; sourceTree = "<group>"; };
-		4355C16CB9CA592973ABD5CFDF0F6DDB /* AppIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIdentity.swift; path = Source/Security/Identity/AppIdentity.swift; sourceTree = "<group>"; };
-		4465296C7B506E466843F385D344F091 /* AuthorizationError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationError.swift; path = Source/BluemixAppID/api/AuthorizationError.swift; sourceTree = "<group>"; };
-		44995E7D9C46E5E29F542200C36B2B7C /* TokenResponseDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenResponseDelegate.swift; path = Source/BluemixAppID/api/TokenResponseDelegate.swift; sourceTree = "<group>"; };
-		46A8A8557F07CF3659411D89800BF958 /* StringPreference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPreference.swift; path = Source/BluemixAppID/internal/StringPreference.swift; sourceTree = "<group>"; };
-		46D407E2D605FEA0E98AC56647265AA9 /* UserIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserIdentity.swift; path = Source/Security/Identity/UserIdentity.swift; sourceTree = "<group>"; };
-		4C66DE90C2567D954DDA6D2A657FB5E6 /* BMSCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BMSCore.xcconfig; sourceTree = "<group>"; };
-		4D9882FFA926190833AF688E664F4304 /* IdentityToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentityToken.swift; path = Source/BluemixAppID/api/IdentityToken.swift; sourceTree = "<group>"; };
-		51AD67839E8AD5142E512420B29F37CB /* BluemixAppID-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BluemixAppID-prefix.pch"; sourceTree = "<group>"; };
-		5879487E0E8619C1A5BF8B58447EDB38 /* BMSCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BMSCore.modulemap; sourceTree = "<group>"; };
-		5AF28DC10F31F56339DCA1F5CC110DDD /* RegistrationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationManager.swift; path = Source/BluemixAppID/internal/RegistrationManager.swift; sourceTree = "<group>"; };
+		14C8D075D986FDA5A50839AAEF464E69 /* BMSCore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BMSCore.modulemap; sourceTree = "<group>"; };
+		1B76FC9EBD08A9681BF9A0A02635112C /* CouchDatabaseOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CouchDatabaseOperation.swift; path = Source/SwiftCloudant/Operations/Server/CouchDatabaseOperation.swift; sourceTree = "<group>"; };
+		204906339232229DF1C5FCCBD8007E93 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = "Source/Network Requests/Request.swift"; sourceTree = "<group>"; };
+		208CA6F7578A03447A6B66A1F718B5B9 /* BMSURLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSession.swift; path = "Source/Network Requests/BMSURLSession.swift"; sourceTree = "<group>"; };
+		209D227CD1524CDFDCA5F9ED1FB8E561 /* IdentityToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentityToken.swift; path = Source/BluemixAppID/api/IdentityToken.swift; sourceTree = "<group>"; };
+		20C55C662997F89564C7891BF21DA89C /* AccessTokenImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessTokenImpl.swift; path = Source/BluemixAppID/internal/tokens/AccessTokenImpl.swift; sourceTree = "<group>"; };
+		234F3FFDC3E56AD4CF869D2F78BC1D1A /* QueryViewOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QueryViewOperation.swift; path = Source/SwiftCloudant/Operations/Views/QueryViewOperation.swift; sourceTree = "<group>"; };
+		25B3105107F685908B2D1D9911B4D414 /* SwiftCloudant.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCloudant.xcconfig; sourceTree = "<group>"; };
+		297DF9292D0032ED327832096D5F684D /* Analytics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Analytics.swift; path = Source/Analytics.swift; sourceTree = "<group>"; };
+		2AE1FA5C7E8EFA1413F0D081E956E320 /* AuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationManager.swift; path = Source/Security/AuthorizationManager.swift; sourceTree = "<group>"; };
+		2C67A13A180BF7A47024CDAD499AD9EE /* PreferenceManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferenceManager.swift; path = Source/BluemixAppID/internal/PreferenceManager.swift; sourceTree = "<group>"; };
+		2CB089AFA8D78B7A4161A1456AADB9BC /* AuthorizationUIManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationUIManager.swift; path = Source/BluemixAppID/internal/AuthorizationUIManager.swift; sourceTree = "<group>"; };
+		2FE225F125760F75F3B66FD81F4A824D /* UserAttributeError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserAttributeError.swift; path = Source/BluemixAppID/api/UserAttributeError.swift; sourceTree = "<group>"; };
+		337F710618FB9A4F8F93AEF2B83D26A9 /* SwiftCloudant.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftCloudant.modulemap; sourceTree = "<group>"; };
+		3691D9FA9721D0D56968283F51CF1AF9 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Source/Resources/module.modulemap; sourceTree = "<group>"; };
+		3A581AF4F66841A022C4ABDADF2FB7BF /* safariView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = safariView.swift; path = Source/BluemixAppID/internal/safariView.swift; sourceTree = "<group>"; };
+		3C1967C5558EB391D51351673367A19C /* BulkDocs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BulkDocs.swift; path = Source/SwiftCloudant/Operations/Documents/BulkDocs.swift; sourceTree = "<group>"; };
+		3CCAF8135CD664F307ECFE34FF0963A4 /* AppIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIdentity.swift; path = Source/Security/Identity/AppIdentity.swift; sourceTree = "<group>"; };
+		3D27316C269017D0A5101D68338920B4 /* GetAllDocsOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GetAllDocsOperation.swift; path = Source/SwiftCloudant/Operations/Views/GetAllDocsOperation.swift; sourceTree = "<group>"; };
+		3E78EF4AFCC39001DD30DA61E3F8A2B7 /* BMSURLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSessionDelegate.swift; path = "Source/Network Requests/BMSURLSessionDelegate.swift"; sourceTree = "<group>"; };
+		3FA49C5D856400E2CA010F9E39DE8D38 /* AuthorizationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationDelegate.swift; path = Source/BluemixAppID/api/AuthorizationDelegate.swift; sourceTree = "<group>"; };
+		4008C74518659A7B4D443AF58F76D3B2 /* IdentityTokenImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IdentityTokenImpl.swift; path = Source/BluemixAppID/internal/tokens/IdentityTokenImpl.swift; sourceTree = "<group>"; };
+		40E8E15FF7624E0C8C8EEB8FB27F9686 /* NetworkMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkMonitor.swift; path = "Source/Network Requests/NetworkMonitor.swift"; sourceTree = "<group>"; };
+		4451B66F629B6E583A4202E3498A9747 /* URLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLSession.swift; path = Source/SwiftCloudant/HTTP/URLSession.swift; sourceTree = "<group>"; };
+		44561BFB9474AED1CBDDA12236A8F379 /* ReadAttachmentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadAttachmentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/ReadAttachmentOperation.swift; sourceTree = "<group>"; };
+		4522C48D91B919AF8638552021A2C0AB /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AAC47C43E8BFBDA92D131CC3211B785 /* CreateDatabaseOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CreateDatabaseOperation.swift; path = Source/SwiftCloudant/Operations/Server/CreateDatabaseOperation.swift; sourceTree = "<group>"; };
+		4AF6FC3D2F4F614D5ACB26C13091815D /* SwiftCloudant-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCloudant-prefix.pch"; sourceTree = "<group>"; };
+		4D20787D3F8B70567551B424A52D8CB9 /* SecurityUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecurityUtils.swift; path = Source/BluemixAppID/internal/SecurityUtils.swift; sourceTree = "<group>"; };
+		5222D3C02D0DFC7C87C5F49496B362B8 /* BMSAnalyticsAPI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BMSAnalyticsAPI.xcconfig; sourceTree = "<group>"; };
+		5BFD42193A598F21BB4DBCC97DD2FC65 /* DeleteQueryIndexOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteQueryIndexOperation.swift; path = Source/SwiftCloudant/Operations/Query/DeleteQueryIndexOperation.swift; sourceTree = "<group>"; };
+		5D16CC6222C2353AD2A61EE8A4A6C9DB /* BaseRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRequest.swift; path = "Source/Network Requests/BaseRequest.swift"; sourceTree = "<group>"; };
 		5D3A7F55658B314D788204947568A8C4 /* Pods-HealthWealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HealthWealth.release.xcconfig"; sourceTree = "<group>"; };
-		5DA7E3C555B09D2D46F42CCABBECD71E /* AppID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppID.swift; path = Source/BluemixAppID/api/AppID.swift; sourceTree = "<group>"; };
-		5FAAE91E5EE47D0E2BC551E85B008086 /* AuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationManager.swift; path = Source/Security/AuthorizationManager.swift; sourceTree = "<group>"; };
-		62788D23295C4468ED5301345740D0F1 /* BMSAnalyticsAPI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BMSAnalyticsAPI.xcconfig; sourceTree = "<group>"; };
+		60373B2786E5363E59DE0B14EEB1C000 /* AbstractToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractToken.swift; path = Source/BluemixAppID/internal/tokens/AbstractToken.swift; sourceTree = "<group>"; };
+		604EE8D5AD1773A9275919830C263EA0 /* BMSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62B10EAD71A0A30E5BF7E56F122737A7 /* ViewPaging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewPaging.swift; path = Source/SwiftCloudant/Operations/Views/ViewPaging.swift; sourceTree = "<group>"; };
+		63191E5FCEFAC65ED4DF6AF3E805EFA0 /* OAuthManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthManager.swift; path = Source/BluemixAppID/internal/OAuthManager.swift; sourceTree = "<group>"; };
+		6392FED3AC87E49EAE37C2E94F0ED4A3 /* DeviceIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceIdentity.swift; path = Source/Security/Identity/DeviceIdentity.swift; sourceTree = "<group>"; };
+		6451405A7E75FF4F7147F369737E6289 /* BluemixAppID-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BluemixAppID-prefix.pch"; sourceTree = "<group>"; };
+		656F69865CC1B38D34258F2FCFFEB4EF /* GetAllDatabasesOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GetAllDatabasesOperation.swift; path = Source/SwiftCloudant/Operations/Server/GetAllDatabasesOperation.swift; sourceTree = "<group>"; };
+		66EF34ED5FDD2CCC4E71C192B457A817 /* RequestMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestMetadata.swift; path = Source/RequestMetadata.swift; sourceTree = "<group>"; };
+		6A3E5CB6FC48B129DFA4E4D11C6B06D9 /* AppID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppID.swift; path = Source/BluemixAppID/api/AppID.swift; sourceTree = "<group>"; };
 		6A41A189E28CFD27EB16B5F024BDDC71 /* Pods-HealthWealth-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HealthWealth-acknowledgements.plist"; sourceTree = "<group>"; };
-		6E3B09329901CDE1FBD5EE89E0C7D922 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		6DE26138173610B881F92F8B7E09AA0A /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = Source/SwiftCloudant/Operations/Operation.swift; sourceTree = "<group>"; };
 		6F12CCE89AEC057E021440A6296B6F00 /* Pods-HealthWealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HealthWealth.debug.xcconfig"; sourceTree = "<group>"; };
-		6F25AB926644816D5F99D83711D87FC4 /* BluemixAppID-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BluemixAppID-dummy.m"; sourceTree = "<group>"; };
+		6FB290C4D7DCB469F1579FE9DD412DC2 /* GetChangesOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GetChangesOperation.swift; path = Source/SwiftCloudant/Operations/Database/GetChangesOperation.swift; sourceTree = "<group>"; };
+		71BF42722B28E55753004B4A9639FBC4 /* AuthorizationError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationError.swift; path = Source/BluemixAppID/api/AuthorizationError.swift; sourceTree = "<group>"; };
+		72B8B2E9E57A3B0BF44B3DF6D444609C /* RegistrationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegistrationManager.swift; path = Source/BluemixAppID/internal/RegistrationManager.swift; sourceTree = "<group>"; };
+		74ED64DAE70918052B4EC23D39EA6DF1 /* BaseUserIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseUserIdentity.swift; path = Source/Security/Identity/BaseUserIdentity.swift; sourceTree = "<group>"; };
 		7556A0E17C68D677DCD9D88BE1B4B628 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		758F3F5DAAAAEFDE1192F466FD2FDFCE /* Pods-HealthWealth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HealthWealth-dummy.m"; sourceTree = "<group>"; };
-		7C6B165D8D0EB035AD0FBEFD1D856267 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E6C0D0CAD979E47AB5AC8F8FA1F0889 /* BMSAnalyticsAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BMSAnalyticsAPI.modulemap; sourceTree = "<group>"; };
-		82259729AD311D8BE375788FB1C8868D /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = "Source/Network Requests/Request.swift"; sourceTree = "<group>"; };
+		7762D39DF3F8CC01BEE89726F9E0B929 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Source/Logger.swift; sourceTree = "<group>"; };
+		79678B90F463524D13E10EB4E013B21D /* AppIDError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIDError.swift; path = Source/BluemixAppID/internal/AppIDError.swift; sourceTree = "<group>"; };
+		7AB8267D66A2D3E725C7AD289DDBDF10 /* BluemixAppID.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BluemixAppID.modulemap; sourceTree = "<group>"; };
+		7B98C5335032CCF227CE4639846452E8 /* BMSClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSClient.swift; path = Source/BMSClient.swift; sourceTree = "<group>"; };
+		7C586D5D568B8B5C08C64E11716EC4D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FDC1CCF45A91A1048DF75A9155452F8 /* BMSCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BMSCore-dummy.m"; sourceTree = "<group>"; };
+		824C6AB888F17947AC26BDBBD6CCC564 /* GetDocumentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GetDocumentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/GetDocumentOperation.swift; sourceTree = "<group>"; };
+		842C94AB5646615AC2B050868681AE59 /* JSONPreference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONPreference.swift; path = Source/BluemixAppID/internal/JSONPreference.swift; sourceTree = "<group>"; };
 		846DAF4F4D88AFBDD1B3BAFAD6FE0CAA /* Pods-HealthWealth-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HealthWealth-umbrella.h"; sourceTree = "<group>"; };
-		87973B093A465CFB89D2DB1C37A58CA2 /* UserAttributeManagerImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserAttributeManagerImpl.swift; path = Source/BluemixAppID/internal/UserAttributeManagerImpl.swift; sourceTree = "<group>"; };
-		8A3703FFC45F407214D2F3F043E9F4E8 /* AppIDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIDConstants.swift; path = Source/BluemixAppID/internal/AppIDConstants.swift; sourceTree = "<group>"; };
-		8CD0745AB42CE2D81D9E53C447A068FB /* UserAttributeManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserAttributeManager.swift; path = Source/BluemixAppID/api/UserAttributeManager.swift; sourceTree = "<group>"; };
-		8EF0F876E20290F7970B205FB7816DB2 /* Pods_HealthWealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HealthWealth.framework; path = "Pods-HealthWealth.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94BC4DDC79F75FA2B75C66B7B5CCF832 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = "Source/Network Requests/Response.swift"; sourceTree = "<group>"; };
-		960FE8D96EB36D03D9D98BBD431DDC31 /* JSONPreference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONPreference.swift; path = Source/BluemixAppID/internal/JSONPreference.swift; sourceTree = "<group>"; };
-		9658E0BDBB4D0DDAF87A9DD2642638D8 /* OAuthClientImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthClientImpl.swift; path = Source/BluemixAppID/internal/tokens/OAuthClientImpl.swift; sourceTree = "<group>"; };
-		97430B573F2D9C6C13CB00BB18EFEF3B /* BMSURLSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSession.swift; path = "Source/Network Requests/BMSURLSession.swift"; sourceTree = "<group>"; };
-		98B5D3DCD5D3F48BE446A51887BC4579 /* AbstractToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AbstractToken.swift; path = Source/BluemixAppID/internal/tokens/AbstractToken.swift; sourceTree = "<group>"; };
+		84FEB598D0216218F6C93203DC8C1EB8 /* OAuthClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthClient.swift; path = Source/BluemixAppID/api/Tokens/OAuthClient.swift; sourceTree = "<group>"; };
+		85A3C24A062E875C8028F72881AD05DC /* AuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationManager.swift; path = Source/BluemixAppID/internal/AuthorizationManager.swift; sourceTree = "<group>"; };
+		86A5F59628BB0AFEFDE03FF940EB266B /* SwiftCloudant-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCloudant-dummy.m"; sourceTree = "<group>"; };
+		8708B1BEC5C602B731797021BB86506B /* BluemixAppID-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BluemixAppID-dummy.m"; sourceTree = "<group>"; };
+		87C819FEA1D050ACC0B6557D4BCEF8B0 /* RequestBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestBuilder.swift; path = Source/SwiftCloudant/HTTP/RequestBuilder.swift; sourceTree = "<group>"; };
+		88593744195B549CA45062D9A887AC5A /* FindDocumentsOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FindDocumentsOperation.swift; path = Source/SwiftCloudant/Operations/Query/FindDocumentsOperation.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93E74B767C5819E49B898958E268236C /* BMSCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMSCore.h; path = Source/Resources/BMSCore.h; sourceTree = "<group>"; };
+		941648E97F8D54AF8CAE0C8A63378B1F /* UserAttributeManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserAttributeManager.swift; path = Source/BluemixAppID/api/UserAttributeManager.swift; sourceTree = "<group>"; };
+		9663A28A912759B3A1E1CD63D63A1B6E /* Pods_HealthWealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthWealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		971B4992CEA76860AA6ECA5FC2EA36C4 /* BMSURLSessionUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSURLSessionUtility.swift; path = "Source/Network Requests/BMSURLSessionUtility.swift"; sourceTree = "<group>"; };
+		975A84CC5B600CA1E68DCA19A4F4F81B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98CB55F18A67CBFAE7DC6A1C87755273 /* BMSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AE484B6BB069F1814C279E47DDC9396 /* AuthorizationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationDelegate.swift; path = Source/BluemixAppID/api/AuthorizationDelegate.swift; sourceTree = "<group>"; };
-		9BAE043E3E51A5F3A1D53E2624C5D110 /* BaseAppIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseAppIdentity.swift; path = Source/Security/Identity/BaseAppIdentity.swift; sourceTree = "<group>"; };
-		9D2AADFA9066FFE0711E2367B3C02340 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; name = module.modulemap; path = Source/Resources/module.modulemap; sourceTree = "<group>"; };
-		A61E465F68CDE4442638A8D5DE97B716 /* BluemixAppID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BluemixAppID.framework; path = BluemixAppID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B01BCB75F96FD54EF55CADFCC58CF96D /* AppIDAuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIDAuthorizationManager.swift; path = Source/BluemixAppID/api/AppIDAuthorizationManager.swift; sourceTree = "<group>"; };
-		B08ADF2B628BB9725CE4C06D5BDBB85A /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Source/Logger.swift; sourceTree = "<group>"; };
-		B0EC0AFEC3CADF2588B859C85EDECC0F /* BluemixAppID.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BluemixAppID.xcconfig; sourceTree = "<group>"; };
-		B1F0D832AB2AF0A15363490A1F740131 /* BMSAnalyticsAPI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BMSAnalyticsAPI-dummy.m"; sourceTree = "<group>"; };
-		B64FA2175F12741AC12310C84DAE3DA0 /* NetworkMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkMonitor.swift; path = "Source/Network Requests/NetworkMonitor.swift"; sourceTree = "<group>"; };
-		C1000F8D6A1BB60A3BE900912B197713 /* DeviceIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceIdentity.swift; path = Source/Security/Identity/DeviceIdentity.swift; sourceTree = "<group>"; };
+		9A5F8658CB85D2065818D3C3ED03E83F /* StringPreference.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringPreference.swift; path = Source/BluemixAppID/internal/StringPreference.swift; sourceTree = "<group>"; };
+		9D45B0B0BCF757A2309BDD7CB677E88F /* PutAttachmentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PutAttachmentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/PutAttachmentOperation.swift; sourceTree = "<group>"; };
+		9D579EBF911029B858408C0011766F51 /* BaseDeviceIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseDeviceIdentity.swift; path = Source/Security/Identity/BaseDeviceIdentity.swift; sourceTree = "<group>"; };
+		A0913FDBA121215F72A70225E7721ED9 /* OAuthClientImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthClientImpl.swift; path = Source/BluemixAppID/internal/tokens/OAuthClientImpl.swift; sourceTree = "<group>"; };
+		A3893B4A809F5CA0548EBA670FE64196 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Source/BluemixAppID/internal/Utils.swift; sourceTree = "<group>"; };
+		A4926FB99ABEFFE5A57AAFE545602A7B /* BMSAnalyticsAPI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BMSAnalyticsAPI.modulemap; sourceTree = "<group>"; };
+		A616F058CC9D24BBF588593D62B9AA0D /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		A6D5B262C2B8AC29E8D1E175B40C645B /* TokenManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenManager.swift; path = Source/BluemixAppID/internal/TokenManager.swift; sourceTree = "<group>"; };
+		ACEE2CA15CA69BF1BECF4BD21836A5F5 /* ViewLikeOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewLikeOperation.swift; path = Source/SwiftCloudant/Operations/Views/ViewLikeOperation.swift; sourceTree = "<group>"; };
+		AD5F1F63E1B284157EF74CA5BEF5EC54 /* SwiftCloudant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftCloudant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE8721E6BC778946720DEA769AF0A1DB /* AppIDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIDConstants.swift; path = Source/BluemixAppID/internal/AppIDConstants.swift; sourceTree = "<group>"; };
+		B202E7E20AB4DC7619CF446BD0BA8C37 /* BluemixAppID-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BluemixAppID-umbrella.h"; sourceTree = "<group>"; };
+		B52EB2C5C1B16FE072DD7B1C36D8B618 /* BluemixAppID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BluemixAppID.h; path = Source/Resources/BluemixAppID.h; sourceTree = "<group>"; };
+		B62B5C6CED9958855B3540E703D96500 /* Config.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Source/BluemixAppID/internal/Config.swift; sourceTree = "<group>"; };
+		BC08EFA67A0FD02974DB86A029095086 /* LoginWidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginWidget.swift; path = Source/BluemixAppID/api/LoginWidget.swift; sourceTree = "<group>"; };
+		BCA055B5005FFE611848CECABECC8A98 /* OperationProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperationProtocols.swift; path = Source/SwiftCloudant/Operations/OperationProtocols.swift; sourceTree = "<group>"; };
+		C2829CF8F8B6F0E05B3C5822B212FBB5 /* AuthorizationHeaderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationHeaderHelper.swift; path = Source/BluemixAppID/internal/AuthorizationHeaderHelper.swift; sourceTree = "<group>"; };
+		C3572E079308A46B5D8DEC5D8CBD2560 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4330DE48683F6C700533019D6EF9D22 /* LoginWidgetImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginWidgetImpl.swift; path = Source/BluemixAppID/internal/LoginWidgetImpl.swift; sourceTree = "<group>"; };
+		C47E709A1C84EAEB419661BB1F50E38D /* SwiftCloudant-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCloudant-umbrella.h"; sourceTree = "<group>"; };
+		C6716213CC980F3E8B5631AAEF100C89 /* TokenResponseDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TokenResponseDelegate.swift; path = Source/BluemixAppID/api/TokenResponseDelegate.swift; sourceTree = "<group>"; };
 		C6DA73907A8D18B7F341020F342BAD45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C8B8CDE70E29806920370C1C7B46E628 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Source/BluemixAppID/internal/Utils.swift; sourceTree = "<group>"; };
-		C9A510537ACC19BE7BDA9B0DB36E2268 /* BMSClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BMSClient.swift; path = Source/BMSClient.swift; sourceTree = "<group>"; };
-		CE0D6B3053CDE805AC2EC60ADC8599D4 /* AppIDError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIDError.swift; path = Source/BluemixAppID/internal/AppIDError.swift; sourceTree = "<group>"; };
-		CF01C9D62E168002918B86F97C317353 /* PreferenceManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreferenceManager.swift; path = Source/BluemixAppID/internal/PreferenceManager.swift; sourceTree = "<group>"; };
+		CD59ED4DB6112F43E1AA9B5EE225AD43 /* DeleteDatabaseOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteDatabaseOperation.swift; path = Source/SwiftCloudant/Operations/Server/DeleteDatabaseOperation.swift; sourceTree = "<group>"; };
 		D0A5171E536B3C2E79C34534FAA003AD /* Pods-HealthWealth-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HealthWealth-resources.sh"; sourceTree = "<group>"; };
-		D1AAED8FFDCBE67A1D378B3199957BB1 /* AuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthorizationManager.swift; path = Source/BluemixAppID/internal/AuthorizationManager.swift; sourceTree = "<group>"; };
-		D1BB1573040216A6B65CF54718384B08 /* RequestMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestMetadata.swift; path = Source/RequestMetadata.swift; sourceTree = "<group>"; };
-		D286C092FAEFDDCEF36D3FC4096B2BB7 /* AccessTokenImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessTokenImpl.swift; path = Source/BluemixAppID/internal/tokens/AccessTokenImpl.swift; sourceTree = "<group>"; };
-		D2D31D725656EEA20FE86A7B718FDC62 /* OAuthClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthClient.swift; path = Source/BluemixAppID/api/Tokens/OAuthClient.swift; sourceTree = "<group>"; };
-		D4D09F1AAA0F8E7235508BA457C7A7C6 /* BMSCore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BMSCore-dummy.m"; sourceTree = "<group>"; };
-		D6AFF7473AB7492FC6D2CC3F519919C4 /* SecurityUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecurityUtils.swift; path = Source/BluemixAppID/internal/SecurityUtils.swift; sourceTree = "<group>"; };
-		E042CAD6C38A0535A93F937A295C6A50 /* Pods-HealthWealth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HealthWealth.modulemap"; sourceTree = "<group>"; };
-		E0A1ABC4D95D6E04279F4FFBA1E070E9 /* BMSAnalyticsAPI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSAnalyticsAPI-prefix.pch"; sourceTree = "<group>"; };
-		E536BEF214C145BEDAC9F0E7841DA85B /* LoginWidgetImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginWidgetImpl.swift; path = Source/BluemixAppID/internal/LoginWidgetImpl.swift; sourceTree = "<group>"; };
-		E8B2E924FF04ED83C46F46673904C6A9 /* OAuthManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuthManager.swift; path = Source/BluemixAppID/internal/OAuthManager.swift; sourceTree = "<group>"; };
+		DC8C2A9D088321B91FC269F30878818F /* BluemixAppID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluemixAppID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA08DF70C8622AE9E062C3579A335B7 /* AppIDAuthorizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppIDAuthorizationManager.swift; path = Source/BluemixAppID/api/AppIDAuthorizationManager.swift; sourceTree = "<group>"; };
+		DF0BEE3D6CAEA379FE8ED0D07076765B /* CouchClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CouchClient.swift; path = Source/SwiftCloudant/CouchClient.swift; sourceTree = "<group>"; };
+		E042CAD6C38A0535A93F937A295C6A50 /* Pods-HealthWealth.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HealthWealth.modulemap"; sourceTree = "<group>"; };
+		E0707C6C0CFC6722199DF9F3A3A1DA4F /* RequestExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestExecutor.swift; path = Source/SwiftCloudant/HTTP/RequestExecutor.swift; sourceTree = "<group>"; };
+		E1FAA3CA8FBB06DF31F951EF826A17AA /* UserIdentity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserIdentity.swift; path = Source/Security/Identity/UserIdentity.swift; sourceTree = "<group>"; };
+		EB8D2E62FB841D037C9574400FBE9E4B /* BMSCore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BMSCore.xcconfig; sourceTree = "<group>"; };
+		EC85642053176B5DF75834681F7787D5 /* BluemixAppID.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BluemixAppID.xcconfig; sourceTree = "<group>"; };
+		EE77343169D9547A755119B09F59E8A0 /* BMSAnalyticsAPI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSAnalyticsAPI-umbrella.h"; sourceTree = "<group>"; };
+		EF5519B00D894CF31C45742B51E22866 /* UserAttributeManagerImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserAttributeManagerImpl.swift; path = Source/BluemixAppID/internal/UserAttributeManagerImpl.swift; sourceTree = "<group>"; };
 		EF5E06DE697546FECB43414543E25122 /* Pods-HealthWealth-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HealthWealth-frameworks.sh"; sourceTree = "<group>"; };
-		EFC2FC0B5C395FC4DA950CB581510074 /* BMSCore-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSCore-prefix.pch"; sourceTree = "<group>"; };
-		F207DBA0E6A4D208B4555998CF78A01F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F27C5755A18F6BAC8DCACA95742CFCDE /* LoginWidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginWidget.swift; path = Source/BluemixAppID/api/LoginWidget.swift; sourceTree = "<group>"; };
+		F5AF9EEE8C530429031497403A65BBA7 /* DeleteAttachmentOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeleteAttachmentOperation.swift; path = Source/SwiftCloudant/Operations/Documents/DeleteAttachmentOperation.swift; sourceTree = "<group>"; };
 		F9BED12742B7FCB30E548F85FBF23D4F /* BMSAnalyticsAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMSAnalyticsAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD21B305C7CE78AE14D5D9225C3FD28A /* BluemixAppID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BluemixAppID.h; path = Source/Resources/BluemixAppID.h; sourceTree = "<group>"; };
-		FDB161594992E606A53FF9B7F3629813 /* BaseRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRequest.swift; path = "Source/Network Requests/BaseRequest.swift"; sourceTree = "<group>"; };
+		FA101327A87AC3A6377BC99965A9B0A1 /* AccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = Source/BluemixAppID/api/Tokens/AccessToken.swift; sourceTree = "<group>"; };
+		FB9E6134C7001E2FD8860BCEF3D399D3 /* BMSAnalyticsAPI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BMSAnalyticsAPI-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0596EC2097208DFBE9084DA7C3761407 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BA68D42314BDF9D8792C2A447022826 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6E4B41F9084631A5FF4FD1B27C9ED378 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,6 +302,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8CDD74BF34F4F29002E2B781999C856D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0AB32734E7D55B8FE9CD11FB7F34B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44F317F5F6EF44394DD83ECAE58F8AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2063DFA19039A4ED4FCC389049ECA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F57D15AFB23EEB3A63F978D51637CB81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,16 +330,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E4F874D7399CE0679663E40499721BE /* BMSAnalyticsAPI */ = {
+		0B7C3A05E9FDF37870100B53607FDA63 /* BMSAnalyticsAPI */ = {
 			isa = PBXGroup;
 			children = (
-				12660DEA816C8BEE9B32DEE46121AE31 /* Analytics.swift */,
-				B08ADF2B628BB9725CE4C06D5BDBB85A /* Logger.swift */,
-				D1BB1573040216A6B65CF54718384B08 /* RequestMetadata.swift */,
-				C4616A52B39884ED7900EAC5A06ECA53 /* Support Files */,
+				297DF9292D0032ED327832096D5F684D /* Analytics.swift */,
+				7762D39DF3F8CC01BEE89726F9E0B929 /* Logger.swift */,
+				66EF34ED5FDD2CCC4E71C192B457A817 /* RequestMetadata.swift */,
+				15E2EB9491FA6B1B932D6D76EE9AC7F4 /* Support Files */,
 			);
-			name = BMSAnalyticsAPI;
 			path = BMSAnalyticsAPI;
+			sourceTree = "<group>";
+		};
+		15E2EB9491FA6B1B932D6D76EE9AC7F4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4926FB99ABEFFE5A57AAFE545602A7B /* BMSAnalyticsAPI.modulemap */,
+				5222D3C02D0DFC7C87C5F49496B362B8 /* BMSAnalyticsAPI.xcconfig */,
+				0F387058B085A0A7455D1EFFE71E08A1 /* BMSAnalyticsAPI-dummy.m */,
+				FB9E6134C7001E2FD8860BCEF3D399D3 /* BMSAnalyticsAPI-prefix.pch */,
+				EE77343169D9547A755119B09F59E8A0 /* BMSAnalyticsAPI-umbrella.h */,
+				00DFD64278CA1BCBD25F3ACECA4B4C63 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BMSAnalyticsAPI";
 			sourceTree = "<group>";
 		};
 		1B7DF711185FC1E9A6A1C2824F9071C6 /* Targets Support Files */ = {
@@ -275,17 +363,15 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		1B9DB1E66B4C81FA7BDB8B3736C75C84 /* Support Files */ = {
+		318742B539AC7F0AA990EEBE4C6EBF4F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5879487E0E8619C1A5BF8B58447EDB38 /* BMSCore.modulemap */,
-				4C66DE90C2567D954DDA6D2A657FB5E6 /* BMSCore.xcconfig */,
-				D4D09F1AAA0F8E7235508BA457C7A7C6 /* BMSCore-dummy.m */,
-				EFC2FC0B5C395FC4DA950CB581510074 /* BMSCore-prefix.pch */,
-				2156E0400708E1A4FD093B8C35382658 /* Info.plist */,
+				A119E52A4B8A3BFDDE63F8854B3AA714 /* BluemixAppID */,
+				0B7C3A05E9FDF37870100B53607FDA63 /* BMSAnalyticsAPI */,
+				E11C6F10452542910326D0D0E76A496A /* BMSCore */,
+				C5299B60B451E29D8291311B1996A3DF /* SwiftCloudant */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/BMSCore";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		33662566F5EE3A304F90206490D47667 /* Pods-HealthWealth */ = {
@@ -306,6 +392,18 @@
 			path = "Target Support Files/Pods-HealthWealth";
 			sourceTree = "<group>";
 		};
+		5C3A1591609CDEECDAA142D96559C615 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC8C2A9D088321B91FC269F30878818F /* BluemixAppID.framework */,
+				4522C48D91B919AF8638552021A2C0AB /* BMSAnalyticsAPI.framework */,
+				604EE8D5AD1773A9275919830C263EA0 /* BMSCore.framework */,
+				9663A28A912759B3A1E1CD63D63A1B6E /* Pods_HealthWealth.framework */,
+				AD5F1F63E1B284157EF74CA5BEF5EC54 /* SwiftCloudant.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5DC9082F6E38CDE4C1CE34B958878C12 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,57 +412,31 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5F03E510990FE3ED0694E1C260EAFDF0 /* BluemixAppID */ = {
+		5E450E2C1F7EBC912FC5CDDB39415A55 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				98B5D3DCD5D3F48BE446A51887BC4579 /* AbstractToken.swift */,
-				05B97E0C5DF2EC93D3CDCE4D6B8CC590 /* AccessToken.swift */,
-				D286C092FAEFDDCEF36D3FC4096B2BB7 /* AccessTokenImpl.swift */,
-				5DA7E3C555B09D2D46F42CCABBECD71E /* AppID.swift */,
-				B01BCB75F96FD54EF55CADFCC58CF96D /* AppIDAuthorizationManager.swift */,
-				8A3703FFC45F407214D2F3F043E9F4E8 /* AppIDConstants.swift */,
-				CE0D6B3053CDE805AC2EC60ADC8599D4 /* AppIDError.swift */,
-				9AE484B6BB069F1814C279E47DDC9396 /* AuthorizationDelegate.swift */,
-				4465296C7B506E466843F385D344F091 /* AuthorizationError.swift */,
-				261A855238ABE3CBDAD28608D27E4989 /* AuthorizationHeaderHelper.swift */,
-				D1AAED8FFDCBE67A1D378B3199957BB1 /* AuthorizationManager.swift */,
-				424E9AEFE7896BCD6897526F3871D80F /* AuthorizationUIManager.swift */,
-				FD21B305C7CE78AE14D5D9225C3FD28A /* BluemixAppID.h */,
-				0B6E69504AC195FE970D28639D8BE7FB /* Config.swift */,
-				4D9882FFA926190833AF688E664F4304 /* IdentityToken.swift */,
-				0A56BE780EEC0D7BEC824C0DBE45F6A1 /* IdentityTokenImpl.swift */,
-				960FE8D96EB36D03D9D98BBD431DDC31 /* JSONPreference.swift */,
-				F27C5755A18F6BAC8DCACA95742CFCDE /* LoginWidget.swift */,
-				E536BEF214C145BEDAC9F0E7841DA85B /* LoginWidgetImpl.swift */,
-				D2D31D725656EEA20FE86A7B718FDC62 /* OAuthClient.swift */,
-				9658E0BDBB4D0DDAF87A9DD2642638D8 /* OAuthClientImpl.swift */,
-				E8B2E924FF04ED83C46F46673904C6A9 /* OAuthManager.swift */,
-				CF01C9D62E168002918B86F97C317353 /* PreferenceManager.swift */,
-				5AF28DC10F31F56339DCA1F5CC110DDD /* RegistrationManager.swift */,
-				38C506BE9F8B80815DBDFCA95E62E902 /* safariView.swift */,
-				D6AFF7473AB7492FC6D2CC3F519919C4 /* SecurityUtils.swift */,
-				46A8A8557F07CF3659411D89800BF958 /* StringPreference.swift */,
-				111BAE74CE3A4E11D7445438DFBB9332 /* TokenManager.swift */,
-				44995E7D9C46E5E29F542200C36B2B7C /* TokenResponseDelegate.swift */,
-				1941D15FB0698A7047C555FCE2762E23 /* UserAttributeError.swift */,
-				8CD0745AB42CE2D81D9E53C447A068FB /* UserAttributeManager.swift */,
-				87973B093A465CFB89D2DB1C37A58CA2 /* UserAttributeManagerImpl.swift */,
-				C8B8CDE70E29806920370C1C7B46E628 /* Utils.swift */,
-				A37B8A7280C3A9A8DEE89A157E861BD3 /* Support Files */,
+				7C586D5D568B8B5C08C64E11716EC4D9 /* Info.plist */,
+				337F710618FB9A4F8F93AEF2B83D26A9 /* SwiftCloudant.modulemap */,
+				25B3105107F685908B2D1D9911B4D414 /* SwiftCloudant.xcconfig */,
+				86A5F59628BB0AFEFDE03FF940EB266B /* SwiftCloudant-dummy.m */,
+				4AF6FC3D2F4F614D5ACB26C13091815D /* SwiftCloudant-prefix.pch */,
+				C47E709A1C84EAEB419661BB1F50E38D /* SwiftCloudant-umbrella.h */,
 			);
-			name = BluemixAppID;
-			path = BluemixAppID;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftCloudant";
 			sourceTree = "<group>";
 		};
-		751857080A1D5A507B9B20BEF98B20B5 /* Products */ = {
+		5FDAA2F31543A811CF0AFB7B99C3F972 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A61E465F68CDE4442638A8D5DE97B716 /* BluemixAppID.framework */,
-				1F9C1851BEB157BEFB0AD18FD1B0F851 /* BMSAnalyticsAPI.framework */,
-				1FCFD87B99732841345A30A418AE63C0 /* BMSCore.framework */,
-				8EF0F876E20290F7970B205FB7816DB2 /* Pods_HealthWealth.framework */,
+				14C8D075D986FDA5A50839AAEF464E69 /* BMSCore.modulemap */,
+				EB8D2E62FB841D037C9574400FBE9E4B /* BMSCore.xcconfig */,
+				7FDC1CCF45A91A1048DF75A9155452F8 /* BMSCore-dummy.m */,
+				03C2945E38164FDC20FA6E740DE558DF /* BMSCore-prefix.pch */,
+				975A84CC5B600CA1E68DCA19A4F4F81B /* Info.plist */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/BMSCore";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -372,76 +444,98 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				DA35764551F26AD51B58720E2AC8FB93 /* Frameworks */,
-				9A6290EED3B1D6DB783A52C40539CD5A /* Pods */,
-				751857080A1D5A507B9B20BEF98B20B5 /* Products */,
+				318742B539AC7F0AA990EEBE4C6EBF4F /* Pods */,
+				5C3A1591609CDEECDAA142D96559C615 /* Products */,
 				1B7DF711185FC1E9A6A1C2824F9071C6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		83D999BDB8A8478C63DA4628836CAA89 /* BMSCore */ = {
+		A119E52A4B8A3BFDDE63F8854B3AA714 /* BluemixAppID */ = {
 			isa = PBXGroup;
 			children = (
-				4355C16CB9CA592973ABD5CFDF0F6DDB /* AppIdentity.swift */,
-				5FAAE91E5EE47D0E2BC551E85B008086 /* AuthorizationManager.swift */,
-				9BAE043E3E51A5F3A1D53E2624C5D110 /* BaseAppIdentity.swift */,
-				318D340D0BFD9418255A4FCBCC88A047 /* BaseAuthorizationManager.swift */,
-				045B9785CB927A9491886A541A674994 /* BaseDeviceIdentity.swift */,
-				FDB161594992E606A53FF9B7F3629813 /* BaseRequest.swift */,
-				3421425900C1DF89F3F6032863A93F68 /* BaseUserIdentity.swift */,
-				C9A510537ACC19BE7BDA9B0DB36E2268 /* BMSClient.swift */,
-				2887E848972212F04E33E03EC6C6207E /* BMSCore.h */,
-				97430B573F2D9C6C13CB00BB18EFEF3B /* BMSURLSession.swift */,
-				270A63DBA9D80EC7798F945E946C2468 /* BMSURLSessionDelegate.swift */,
-				1936CF9771525D2370E6DF73078F58E7 /* BMSURLSessionUtility.swift */,
-				C1000F8D6A1BB60A3BE900912B197713 /* DeviceIdentity.swift */,
-				6E3B09329901CDE1FBD5EE89E0C7D922 /* Error.swift */,
-				9D2AADFA9066FFE0711E2367B3C02340 /* module.modulemap */,
-				B64FA2175F12741AC12310C84DAE3DA0 /* NetworkMonitor.swift */,
-				82259729AD311D8BE375788FB1C8868D /* Request.swift */,
-				94BC4DDC79F75FA2B75C66B7B5CCF832 /* Response.swift */,
-				46D407E2D605FEA0E98AC56647265AA9 /* UserIdentity.swift */,
-				1B9DB1E66B4C81FA7BDB8B3736C75C84 /* Support Files */,
+				60373B2786E5363E59DE0B14EEB1C000 /* AbstractToken.swift */,
+				FA101327A87AC3A6377BC99965A9B0A1 /* AccessToken.swift */,
+				20C55C662997F89564C7891BF21DA89C /* AccessTokenImpl.swift */,
+				6A3E5CB6FC48B129DFA4E4D11C6B06D9 /* AppID.swift */,
+				DEA08DF70C8622AE9E062C3579A335B7 /* AppIDAuthorizationManager.swift */,
+				AE8721E6BC778946720DEA769AF0A1DB /* AppIDConstants.swift */,
+				79678B90F463524D13E10EB4E013B21D /* AppIDError.swift */,
+				3FA49C5D856400E2CA010F9E39DE8D38 /* AuthorizationDelegate.swift */,
+				71BF42722B28E55753004B4A9639FBC4 /* AuthorizationError.swift */,
+				C2829CF8F8B6F0E05B3C5822B212FBB5 /* AuthorizationHeaderHelper.swift */,
+				85A3C24A062E875C8028F72881AD05DC /* AuthorizationManager.swift */,
+				2CB089AFA8D78B7A4161A1456AADB9BC /* AuthorizationUIManager.swift */,
+				B52EB2C5C1B16FE072DD7B1C36D8B618 /* BluemixAppID.h */,
+				B62B5C6CED9958855B3540E703D96500 /* Config.swift */,
+				209D227CD1524CDFDCA5F9ED1FB8E561 /* IdentityToken.swift */,
+				4008C74518659A7B4D443AF58F76D3B2 /* IdentityTokenImpl.swift */,
+				842C94AB5646615AC2B050868681AE59 /* JSONPreference.swift */,
+				BC08EFA67A0FD02974DB86A029095086 /* LoginWidget.swift */,
+				C4330DE48683F6C700533019D6EF9D22 /* LoginWidgetImpl.swift */,
+				84FEB598D0216218F6C93203DC8C1EB8 /* OAuthClient.swift */,
+				A0913FDBA121215F72A70225E7721ED9 /* OAuthClientImpl.swift */,
+				63191E5FCEFAC65ED4DF6AF3E805EFA0 /* OAuthManager.swift */,
+				2C67A13A180BF7A47024CDAD499AD9EE /* PreferenceManager.swift */,
+				72B8B2E9E57A3B0BF44B3DF6D444609C /* RegistrationManager.swift */,
+				3A581AF4F66841A022C4ABDADF2FB7BF /* safariView.swift */,
+				4D20787D3F8B70567551B424A52D8CB9 /* SecurityUtils.swift */,
+				9A5F8658CB85D2065818D3C3ED03E83F /* StringPreference.swift */,
+				A6D5B262C2B8AC29E8D1E175B40C645B /* TokenManager.swift */,
+				C6716213CC980F3E8B5631AAEF100C89 /* TokenResponseDelegate.swift */,
+				2FE225F125760F75F3B66FD81F4A824D /* UserAttributeError.swift */,
+				941648E97F8D54AF8CAE0C8A63378B1F /* UserAttributeManager.swift */,
+				EF5519B00D894CF31C45742B51E22866 /* UserAttributeManagerImpl.swift */,
+				A3893B4A809F5CA0548EBA670FE64196 /* Utils.swift */,
+				AF1BE339999660FDC4030FCC3385A04E /* Support Files */,
 			);
-			name = BMSCore;
-			path = BMSCore;
+			path = BluemixAppID;
 			sourceTree = "<group>";
 		};
-		9A6290EED3B1D6DB783A52C40539CD5A /* Pods */ = {
+		AF1BE339999660FDC4030FCC3385A04E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5F03E510990FE3ED0694E1C260EAFDF0 /* BluemixAppID */,
-				0E4F874D7399CE0679663E40499721BE /* BMSAnalyticsAPI */,
-				83D999BDB8A8478C63DA4628836CAA89 /* BMSCore */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A37B8A7280C3A9A8DEE89A157E861BD3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4098FE4B168CB02FA6A375D673F79CEE /* BluemixAppID.modulemap */,
-				B0EC0AFEC3CADF2588B859C85EDECC0F /* BluemixAppID.xcconfig */,
-				6F25AB926644816D5F99D83711D87FC4 /* BluemixAppID-dummy.m */,
-				51AD67839E8AD5142E512420B29F37CB /* BluemixAppID-prefix.pch */,
-				2AFF116AABE8E92D68EF11A2B4FE3E87 /* BluemixAppID-umbrella.h */,
-				F207DBA0E6A4D208B4555998CF78A01F /* Info.plist */,
+				7AB8267D66A2D3E725C7AD289DDBDF10 /* BluemixAppID.modulemap */,
+				EC85642053176B5DF75834681F7787D5 /* BluemixAppID.xcconfig */,
+				8708B1BEC5C602B731797021BB86506B /* BluemixAppID-dummy.m */,
+				6451405A7E75FF4F7147F369737E6289 /* BluemixAppID-prefix.pch */,
+				B202E7E20AB4DC7619CF446BD0BA8C37 /* BluemixAppID-umbrella.h */,
+				C3572E079308A46B5D8DEC5D8CBD2560 /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BluemixAppID";
 			sourceTree = "<group>";
 		};
-		C4616A52B39884ED7900EAC5A06ECA53 /* Support Files */ = {
+		C5299B60B451E29D8291311B1996A3DF /* SwiftCloudant */ = {
 			isa = PBXGroup;
 			children = (
-				7E6C0D0CAD979E47AB5AC8F8FA1F0889 /* BMSAnalyticsAPI.modulemap */,
-				62788D23295C4468ED5301345740D0F1 /* BMSAnalyticsAPI.xcconfig */,
-				B1F0D832AB2AF0A15363490A1F740131 /* BMSAnalyticsAPI-dummy.m */,
-				E0A1ABC4D95D6E04279F4FFBA1E070E9 /* BMSAnalyticsAPI-prefix.pch */,
-				094AA0EE93098BD8F0BDB922F3D0AF66 /* BMSAnalyticsAPI-umbrella.h */,
-				7C6B165D8D0EB035AD0FBEFD1D856267 /* Info.plist */,
+				3C1967C5558EB391D51351673367A19C /* BulkDocs.swift */,
+				DF0BEE3D6CAEA379FE8ED0D07076765B /* CouchClient.swift */,
+				1B76FC9EBD08A9681BF9A0A02635112C /* CouchDatabaseOperation.swift */,
+				4AAC47C43E8BFBDA92D131CC3211B785 /* CreateDatabaseOperation.swift */,
+				03E889D3F9106A99A68405138ACE83B0 /* CreateQueryIndexOperation.swift */,
+				F5AF9EEE8C530429031497403A65BBA7 /* DeleteAttachmentOperation.swift */,
+				CD59ED4DB6112F43E1AA9B5EE225AD43 /* DeleteDatabaseOperation.swift */,
+				02D76E3316DB0D70FFF290656EF01A2E /* DeleteDocumentOperation.swift */,
+				5BFD42193A598F21BB4DBCC97DD2FC65 /* DeleteQueryIndexOperation.swift */,
+				88593744195B549CA45062D9A887AC5A /* FindDocumentsOperation.swift */,
+				656F69865CC1B38D34258F2FCFFEB4EF /* GetAllDatabasesOperation.swift */,
+				3D27316C269017D0A5101D68338920B4 /* GetAllDocsOperation.swift */,
+				6FB290C4D7DCB469F1579FE9DD412DC2 /* GetChangesOperation.swift */,
+				824C6AB888F17947AC26BDBBD6CCC564 /* GetDocumentOperation.swift */,
+				6DE26138173610B881F92F8B7E09AA0A /* Operation.swift */,
+				BCA055B5005FFE611848CECABECC8A98 /* OperationProtocols.swift */,
+				9D45B0B0BCF757A2309BDD7CB677E88F /* PutAttachmentOperation.swift */,
+				0C55C7E4B2AB2AD576AFD13B34ACD656 /* PutDocumentOperation.swift */,
+				234F3FFDC3E56AD4CF869D2F78BC1D1A /* QueryViewOperation.swift */,
+				44561BFB9474AED1CBDDA12236A8F379 /* ReadAttachmentOperation.swift */,
+				87C819FEA1D050ACC0B6557D4BCEF8B0 /* RequestBuilder.swift */,
+				E0707C6C0CFC6722199DF9F3A3A1DA4F /* RequestExecutor.swift */,
+				4451B66F629B6E583A4202E3498A9747 /* URLSession.swift */,
+				ACEE2CA15CA69BF1BECF4BD21836A5F5 /* ViewLikeOperation.swift */,
+				62B10EAD71A0A30E5BF7E56F122737A7 /* ViewPaging.swift */,
+				5E450E2C1F7EBC912FC5CDDB39415A55 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/BMSAnalyticsAPI";
+			path = SwiftCloudant;
 			sourceTree = "<group>";
 		};
 		DA35764551F26AD51B58720E2AC8FB93 /* Frameworks */ = {
@@ -454,14 +548,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E11C6F10452542910326D0D0E76A496A /* BMSCore */ = {
+			isa = PBXGroup;
+			children = (
+				3CCAF8135CD664F307ECFE34FF0963A4 /* AppIdentity.swift */,
+				2AE1FA5C7E8EFA1413F0D081E956E320 /* AuthorizationManager.swift */,
+				07F59C3B18DFDEC988F9F0B7B26F56A9 /* BaseAppIdentity.swift */,
+				0B8A52623AAD104E68EB90CA5A6C6B17 /* BaseAuthorizationManager.swift */,
+				9D579EBF911029B858408C0011766F51 /* BaseDeviceIdentity.swift */,
+				5D16CC6222C2353AD2A61EE8A4A6C9DB /* BaseRequest.swift */,
+				74ED64DAE70918052B4EC23D39EA6DF1 /* BaseUserIdentity.swift */,
+				7B98C5335032CCF227CE4639846452E8 /* BMSClient.swift */,
+				93E74B767C5819E49B898958E268236C /* BMSCore.h */,
+				208CA6F7578A03447A6B66A1F718B5B9 /* BMSURLSession.swift */,
+				3E78EF4AFCC39001DD30DA61E3F8A2B7 /* BMSURLSessionDelegate.swift */,
+				971B4992CEA76860AA6ECA5FC2EA36C4 /* BMSURLSessionUtility.swift */,
+				6392FED3AC87E49EAE37C2E94F0ED4A3 /* DeviceIdentity.swift */,
+				A616F058CC9D24BBF588593D62B9AA0D /* Error.swift */,
+				3691D9FA9721D0D56968283F51CF1AF9 /* module.modulemap */,
+				40E8E15FF7624E0C8C8EEB8FB27F9686 /* NetworkMonitor.swift */,
+				204906339232229DF1C5FCCBD8007E93 /* Request.swift */,
+				0E99633AD023F75E7E0D991B85002CF3 /* Response.swift */,
+				E1FAA3CA8FBB06DF31F951EF826A17AA /* UserIdentity.swift */,
+				5FDAA2F31543A811CF0AFB7B99C3F972 /* Support Files */,
+			);
+			path = BMSCore;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		171EC1EF3B0D43D65CB7D49527D05BCC /* Headers */ = {
+		3B9E5A5C991A872D2C4002D1B67E9C0E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FEF8883188D55BE40F4A0C75D274814 /* Pods-HealthWealth-umbrella.h in Headers */,
+				D0CAC4247CB811A35742507803686843 /* Pods-HealthWealth-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,27 +611,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E529AB21F6AD11E480A09D930F16EA10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A49B31867EAFD8506F57BF9DBC19DB /* SwiftCloudant-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3F26D2E3A53E9D2B3DB5CF0E9991958F /* Pods-HealthWealth */ = {
+		060C6FFDF44AB543B4F5E9563B0BBBCB /* Pods-HealthWealth */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9C2C578A4BA972747352709E82343DA /* Build configuration list for PBXNativeTarget "Pods-HealthWealth" */;
+			buildConfigurationList = 3DDEB21447CF903E0610DC2E6FD7670A /* Build configuration list for PBXNativeTarget "Pods-HealthWealth" */;
 			buildPhases = (
-				432857808B985C5EF82211217ED2BB9E /* Sources */,
-				0596EC2097208DFBE9084DA7C3761407 /* Frameworks */,
-				171EC1EF3B0D43D65CB7D49527D05BCC /* Headers */,
+				B793374F1A8EDFAE568999124AD3BB82 /* Sources */,
+				8CDD74BF34F4F29002E2B781999C856D /* Frameworks */,
+				3B9E5A5C991A872D2C4002D1B67E9C0E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				68F208E88FB8214F43F13C2248ACB1D0 /* PBXTargetDependency */,
-				E3DB9D732D1E1CEDF7EB006E469E534F /* PBXTargetDependency */,
-				BFEAC8A2AD80656FF1E8013F580E5410 /* PBXTargetDependency */,
+				C270C3B687172DDA4C698D8F1AFD29C7 /* PBXTargetDependency */,
+				E3AC39DAC7C3B4D51DF18F6DD3BC96D4 /* PBXTargetDependency */,
+				DA3C06B038D3129A6711A3BD4BA0D3F2 /* PBXTargetDependency */,
+				D84F3FB340469352D7C194495CA81E9B /* PBXTargetDependency */,
 			);
 			name = "Pods-HealthWealth";
 			productName = "Pods-HealthWealth";
-			productReference = 8EF0F876E20290F7970B205FB7816DB2 /* Pods_HealthWealth.framework */;
+			productReference = 9663A28A912759B3A1E1CD63D63A1B6E /* Pods_HealthWealth.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		27F123B35797829920287A573E421A59 /* SwiftCloudant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 702B3C3782EF86363EE9E54E5EF6ADCE /* Build configuration list for PBXNativeTarget "SwiftCloudant" */;
+			buildPhases = (
+				DA299164990E841C8E4B499CEB2A886A /* Sources */,
+				A44F317F5F6EF44394DD83ECAE58F8AD /* Frameworks */,
+				E529AB21F6AD11E480A09D930F16EA10 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftCloudant;
+			productName = SwiftCloudant;
+			productReference = AD5F1F63E1B284157EF74CA5BEF5EC54 /* SwiftCloudant.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4100EF12FB42CBD16C06640C93C8A575 /* BMSCore */ = {
@@ -528,7 +675,7 @@
 			);
 			name = BMSCore;
 			productName = BMSCore;
-			productReference = 1FCFD87B99732841345A30A418AE63C0 /* BMSCore.framework */;
+			productReference = 604EE8D5AD1773A9275919830C263EA0 /* BMSCore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5266477420DD84DA13C3AAAD5B8DD90C /* BMSAnalyticsAPI */ = {
@@ -545,7 +692,7 @@
 			);
 			name = BMSAnalyticsAPI;
 			productName = BMSAnalyticsAPI;
-			productReference = 1F9C1851BEB157BEFB0AD18FD1B0F851 /* BMSAnalyticsAPI.framework */;
+			productReference = 4522C48D91B919AF8638552021A2C0AB /* BMSAnalyticsAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		542BE1A513134CF6D1701470FA9543CE /* BluemixAppID */ = {
@@ -564,7 +711,7 @@
 			);
 			name = BluemixAppID;
 			productName = BluemixAppID;
-			productReference = A61E465F68CDE4442638A8D5DE97B716 /* BluemixAppID.framework */;
+			productReference = DC8C2A9D088321B91FC269F30878818F /* BluemixAppID.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -584,14 +731,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 751857080A1D5A507B9B20BEF98B20B5 /* Products */;
+			productRefGroup = 5C3A1591609CDEECDAA142D96559C615 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				542BE1A513134CF6D1701470FA9543CE /* BluemixAppID */,
 				5266477420DD84DA13C3AAAD5B8DD90C /* BMSAnalyticsAPI */,
 				4100EF12FB42CBD16C06640C93C8A575 /* BMSCore */,
-				3F26D2E3A53E9D2B3DB5CF0E9991958F /* Pods-HealthWealth */,
+				060C6FFDF44AB543B4F5E9563B0BBBCB /* Pods-HealthWealth */,
+				27F123B35797829920287A573E421A59 /* SwiftCloudant */,
 			);
 		};
 /* End PBXProject section */
@@ -634,11 +782,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		432857808B985C5EF82211217ED2BB9E /* Sources */ = {
+		B793374F1A8EDFAE568999124AD3BB82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A910825FE22E2A5A10916B62308B0807 /* Pods-HealthWealth-dummy.m in Sources */,
+				8CE2BC7F714FA7DAABB795455DC1F4FC /* Pods-HealthWealth-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +830,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA299164990E841C8E4B499CEB2A886A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37848059CFB4F261DD2B3609F85C78DB /* BulkDocs.swift in Sources */,
+				343898900C0D885A4CAE36D61870282D /* CouchClient.swift in Sources */,
+				E30247F697759F81813E27449CB4BCA6 /* CouchDatabaseOperation.swift in Sources */,
+				7029BAF337D56854E52CFE9B30C0CE38 /* CreateDatabaseOperation.swift in Sources */,
+				5A06AB5117DD455665689F7424001AB1 /* CreateQueryIndexOperation.swift in Sources */,
+				1AE9C4E1A573CACE5924C871A22A5F97 /* DeleteAttachmentOperation.swift in Sources */,
+				8A881CD51BEF2CA639171C8294A4B2B5 /* DeleteDatabaseOperation.swift in Sources */,
+				47DBBE989E27D230CEF803DC6804EF00 /* DeleteDocumentOperation.swift in Sources */,
+				23BE41ED16C4FDCBA62C8556B5531415 /* DeleteQueryIndexOperation.swift in Sources */,
+				EE5EAB61B7E5F4A65DE038B358410F79 /* FindDocumentsOperation.swift in Sources */,
+				A76089C82DD165F71E7C87FBDF7E2573 /* GetAllDatabasesOperation.swift in Sources */,
+				477505E99010252D26FA5A2DD4E19801 /* GetAllDocsOperation.swift in Sources */,
+				8006460864B78303AEAB264B77D0F06D /* GetChangesOperation.swift in Sources */,
+				81A156240B45CDD77DF2D57D8AB38F1F /* GetDocumentOperation.swift in Sources */,
+				DFCA03F7AD37D8C088524112330D1FFD /* Operation.swift in Sources */,
+				EAC3F9FD8192AB0F274CF2E50205CB11 /* OperationProtocols.swift in Sources */,
+				8B9A1E438C5427522D90F24AEA4F9D52 /* PutAttachmentOperation.swift in Sources */,
+				F6454352B5800BA16FEFED5F4B86C671 /* PutDocumentOperation.swift in Sources */,
+				3071B86483EE39019C6CB4E3AD20A5C1 /* QueryViewOperation.swift in Sources */,
+				EF487120F571D1406DC33B78F29C6693 /* ReadAttachmentOperation.swift in Sources */,
+				03E95D9F57DA08F2B1B85DF10AA90690 /* RequestBuilder.swift in Sources */,
+				08364F95B4C847D69FC9CD067AB92A02 /* RequestExecutor.swift in Sources */,
+				2D1178408A3E435BE4E5FC2C9336A281 /* SwiftCloudant-dummy.m in Sources */,
+				C66FF38D500D641275501095FCDFC53C /* URLSession.swift in Sources */,
+				DC508D043A9DD49DD373C0FAB2FF39C8 /* ViewLikeOperation.swift in Sources */,
+				C90273AD5B9E3ACA6D7477C20E22EC7D /* ViewPaging.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -690,12 +871,6 @@
 			name = BMSAnalyticsAPI;
 			target = 5266477420DD84DA13C3AAAD5B8DD90C /* BMSAnalyticsAPI */;
 			targetProxy = 5DFA77C0C6E53CBA0C5115F44510A412 /* PBXContainerItemProxy */;
-		};
-		68F208E88FB8214F43F13C2248ACB1D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BMSAnalyticsAPI;
-			target = 5266477420DD84DA13C3AAAD5B8DD90C /* BMSAnalyticsAPI */;
-			targetProxy = 2FD924572E9E67ACF7767727055FA6D7 /* PBXContainerItemProxy */;
 		};
 		992558046F211AD62EED303435994957 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -709,24 +884,36 @@
 			target = 5266477420DD84DA13C3AAAD5B8DD90C /* BMSAnalyticsAPI */;
 			targetProxy = 0B900504157B11366D9A33FFE9277E53 /* PBXContainerItemProxy */;
 		};
-		BFEAC8A2AD80656FF1E8013F580E5410 /* PBXTargetDependency */ = {
+		C270C3B687172DDA4C698D8F1AFD29C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BMSAnalyticsAPI;
+			target = 5266477420DD84DA13C3AAAD5B8DD90C /* BMSAnalyticsAPI */;
+			targetProxy = B72DC764F1E1867A01686FFD74796557 /* PBXContainerItemProxy */;
+		};
+		D84F3FB340469352D7C194495CA81E9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCloudant;
+			target = 27F123B35797829920287A573E421A59 /* SwiftCloudant */;
+			targetProxy = 982AAEBBFE032EF95833505772ED8FD3 /* PBXContainerItemProxy */;
+		};
+		DA3C06B038D3129A6711A3BD4BA0D3F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BluemixAppID;
 			target = 542BE1A513134CF6D1701470FA9543CE /* BluemixAppID */;
-			targetProxy = 476547F9C35E5FEAA118747E8BE527D5 /* PBXContainerItemProxy */;
+			targetProxy = 26D971EF6ED583797710A387539CDC75 /* PBXContainerItemProxy */;
 		};
-		E3DB9D732D1E1CEDF7EB006E469E534F /* PBXTargetDependency */ = {
+		E3AC39DAC7C3B4D51DF18F6DD3BC96D4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BMSCore;
 			target = 4100EF12FB42CBD16C06640C93C8A575 /* BMSCore */;
-			targetProxy = 83919C7FAC37D87FD1CB1373807A8DC0 /* PBXContainerItemProxy */;
+			targetProxy = F4BBCB0C5C2120860AEE2479E23A2A6C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1E3F58B3D880EBF2B678398986D5857C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C66DE90C2567D954DDA6D2A657FB5E6 /* BMSCore.xcconfig */;
+			baseConfigurationReference = EB8D2E62FB841D037C9574400FBE9E4B /* BMSCore.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -759,81 +946,42 @@
 			};
 			name = Release;
 		};
-		2DC7384EE2124D5026D4A2EE46F65D75 /* Debug */ = {
+		2ABE03CBBC1C43C7B77FDAD4A23AE019 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F12CCE89AEC057E021440A6296B6F00 /* Pods-HealthWealth.debug.xcconfig */;
+			baseConfigurationReference = 25B3105107F685908B2D1D9911B4D414 /* SwiftCloudant.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-HealthWealth/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HealthWealth/Pods-HealthWealth.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_HealthWealth;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5147BB922190FC95EA84E775EF1F7801 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C66DE90C2567D954DDA6D2A657FB5E6 /* BMSCore.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BMSCore/BMSCore-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BMSCore/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCloudant/SwiftCloudant-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCloudant/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BMSCore/BMSCore.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = BMSCore;
+				MODULEMAP_FILE = "Target Support Files/SwiftCloudant/SwiftCloudant.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftCloudant;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		51B57E1B58E96EE1DABFC4EBBFB5C23F /* Release */ = {
+		4F697BAA7FF88121033A3A2678C28C52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D3A7F55658B314D788204947568A8C4 /* Pods-HealthWealth.release.xcconfig */;
 			buildSettings = {
@@ -871,9 +1019,44 @@
 			};
 			name = Release;
 		};
+		5147BB922190FC95EA84E775EF1F7801 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB8D2E62FB841D037C9574400FBE9E4B /* BMSCore.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BMSCore/BMSCore-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BMSCore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BMSCore/BMSCore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BMSCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		53E612ED27BB29DE443DE0DCF88691D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62788D23295C4468ED5301345740D0F1 /* BMSAnalyticsAPI.xcconfig */;
+			baseConfigurationReference = 5222D3C02D0DFC7C87C5F49496B362B8 /* BMSAnalyticsAPI.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -908,7 +1091,7 @@
 		};
 		5BE8A412736C2388B9133C8E6656AC03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62788D23295C4468ED5301345740D0F1 /* BMSAnalyticsAPI.xcconfig */;
+			baseConfigurationReference = 5222D3C02D0DFC7C87C5F49496B362B8 /* BMSAnalyticsAPI.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -943,7 +1126,7 @@
 		};
 		6149ECA5515F5CD8D4CC6A47E6A8417D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0EC0AFEC3CADF2588B859C85EDECC0F /* BluemixAppID.xcconfig */;
+			baseConfigurationReference = EC85642053176B5DF75834681F7787D5 /* BluemixAppID.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -978,7 +1161,7 @@
 		};
 		79E9AFFA6924357D001F4F9781BCF448 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0EC0AFEC3CADF2588B859C85EDECC0F /* BluemixAppID.xcconfig */;
+			baseConfigurationReference = EC85642053176B5DF75834681F7787D5 /* BluemixAppID.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1005,6 +1188,45 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7B2C03F5FA3D3C5D39A2B7293A26FDD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F12CCE89AEC057E021440A6296B6F00 /* Pods-HealthWealth.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HealthWealth/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HealthWealth/Pods-HealthWealth.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HealthWealth;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1054,6 +1276,41 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		CA1197E40F384266477E2ED20DA12A0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25B3105107F685908B2D1D9911B4D414 /* SwiftCloudant.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCloudant/SwiftCloudant-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCloudant/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftCloudant/SwiftCloudant.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftCloudant;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		D72E489B59C3A70112D2342F402BD262 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1116,6 +1373,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3DDEB21447CF903E0610DC2E6FD7670A /* Build configuration list for PBXNativeTarget "Pods-HealthWealth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2C03F5FA3D3C5D39A2B7293A26FDD8 /* Debug */,
+				4F697BAA7FF88121033A3A2678C28C52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		55C64A6F7BF99B00D2C14061EBE0AB7A /* Build configuration list for PBXNativeTarget "BMSCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1134,20 +1400,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		702B3C3782EF86363EE9E54E5EF6ADCE /* Build configuration list for PBXNativeTarget "SwiftCloudant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1197E40F384266477E2ED20DA12A0A /* Debug */,
+				2ABE03CBBC1C43C7B77FDAD4A23AE019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B36BD46A1FE92EA76B0DF43335D2EB3D /* Build configuration list for PBXNativeTarget "BMSAnalyticsAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53E612ED27BB29DE443DE0DCF88691D7 /* Debug */,
 				5BE8A412736C2388B9133C8E6656AC03 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B9C2C578A4BA972747352709E82343DA /* Build configuration list for PBXNativeTarget "Pods-HealthWealth" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2DC7384EE2124D5026D4A2EE46F65D75 /* Debug */,
-				51B57E1B58E96EE1DABFC4EBBFB5C23F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
