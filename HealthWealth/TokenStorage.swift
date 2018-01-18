@@ -16,7 +16,6 @@ import BluemixAppID
 
 
 let tokenServiceName = "appid_access_token_"
-let revisionServiceName = "appid_access_revision_"
 let userIdServiceName = "appid_userId_"
 
 public class TokenStorageManager {
@@ -36,15 +35,7 @@ public class TokenStorageManager {
     public func loadStoredToken() -> String? {
         return load(key: tokenServiceName + tenantId!)
     }
-    
-    public func storeRevisionID(id: String?) {
-        save(key: revisionServiceName + tenantId!, value: id)
-    }
-    
-    public func loadRevisionID() -> String? {
-        return load(key: revisionServiceName + tenantId!)
-    }
-    
+
     public func storeUserId(userId: String?) {
         save(key: userIdServiceName + tenantId!, value: userId)
     }

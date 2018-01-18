@@ -9,12 +9,18 @@
 import UIKit
 import BluemixAppID
 import BMSCore
+import SwiftyButton
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let button = PressableButton()
+        button.colors = .init(button: .cyan, shadow: .blue)
+        button.shadowHeight = 5
+        button.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,9 +30,6 @@ class ViewController: UIViewController {
     
     class delegate : AuthorizationDelegate {
         func onAuthorizationSuccess(accessToken: AccessToken?, identityToken: IdentityToken?, response: Response?) {
-            let mainView  = UIApplication.shared.keyWindow?.rootViewController
-            let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashBoardView") as? DashBoardViewController
-            
             
             if (accessToken?.isAnonymous)! {
                 TokenStorageManager.sharedInstance.storeToken(token: accessToken?.raw)
@@ -34,10 +37,21 @@ class ViewController: UIViewController {
                 TokenStorageManager.sharedInstance.clearStoredToken()
             }
             TokenStorageManager.sharedInstance.storeUserId(userId: accessToken?.subject)
-            
-            DispatchQueue.main.async {
-                mainView?.present(afterLoginView!, animated: true, completion: nil)
+            let name = identityToken?.name != nil ? identityToken?.name : ""
+            if (name?.lowercased().starts(with: "v"))! {
+                let mainView  = UIApplication.shared.keyWindow?.rootViewController
+                let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DoctorView") as? DoctorViewController
+                DispatchQueue.main.async {
+                    mainView?.present(afterLoginView!, animated: true, completion: nil)
+                }
+            } else {
+                let mainView  = UIApplication.shared.keyWindow?.rootViewController
+                let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashBoardView") as? DashBoardViewController
+                DispatchQueue.main.async {
+                    mainView?.present(afterLoginView!, animated: true, completion: nil)
+                }
             }
+           
         }
        
         

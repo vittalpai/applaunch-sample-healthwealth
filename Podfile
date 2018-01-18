@@ -5,4 +5,6 @@ target 'HealthWealth' do
   use_frameworks!
 	pod 'BluemixAppID'
   	pod 'SwiftCloudant'
+  	pod 'Koloda'
+  	pod 'SwiftyButton'
 end
