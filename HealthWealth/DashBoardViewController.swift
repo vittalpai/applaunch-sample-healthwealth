@@ -19,11 +19,11 @@ class DashBoardViewController: UIViewController,  UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         // Create a document
-        CloudantAdapter.sharedInstance.createDocument(TokenStorageManager.sharedInstance.loadUserId()!) { (response) in
+        CloudantAdapter.sharedInstance.createDocument(TokenStorageManager.sharedInstance.loadUserId()!,  { (response) in
             if(response) {
                 print("Successfully created User Doc")
             }
-        }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +36,7 @@ class DashBoardViewController: UIViewController,  UINavigationControllerDelegate
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = true
+        //imagePicker.allowsEditing = true
         
         present(imagePicker, animated: true, completion: nil)
     }

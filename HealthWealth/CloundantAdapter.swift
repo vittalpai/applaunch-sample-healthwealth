@@ -13,12 +13,10 @@ import SwiftCloudant
 internal class CloudantAdapter {
     internal static var sharedInstance = CloudantAdapter()
     
+    var images:[UIImage] = [UIImage]()
+    
     let client = CouchDBClient(url: URL(string:"https://5bf42439-5b18-4464-bbfb-4f38f16fcbea-bluemix:3218ea08dfb0870b61c00eb88fa73e2e0236f75bd5e215bc27a62ff1405b1077@5bf42439-5b18-4464-bbfb-4f38f16fcbea-bluemix.cloudant.com")!, username:"5bf42439-5b18-4464-bbfb-4f38f16fcbea-bluemix", password:"3218ea08dfb0870b61c00eb88fa73e2e0236f75bd5e215bc27a62ff1405b1077")
     let dbName = "healthwealth"
-    
-    init() {
-        
-    }
     
     internal func createDocument(_ documentID: String,_  completionHandler:@escaping ((Bool) -> Void)) {
         let create = PutDocumentOperation(id: documentID, revision: nil, body: [:], databaseName: dbName) {(response, httpInfo, error) in
@@ -41,23 +39,23 @@ internal class CloudantAdapter {
     
     internal func addImage(_ documentID: String,_ image: Data,_  completionHandler:@escaping ((Bool) -> Void)) {
         getRevisionID(documentID) { (RevisionID) in
-            if (RevisionID != nil) {
+            if (RevisionID.isEmpty) {
                 let putAttachment = PutAttachmentOperation(name: "image",
                                                            contentType:"text/plain",
                                                            data: image,
                                                            documentID: documentID,
                                                            revision: RevisionID,
                                                            databaseName: self.dbName) { (response, info, error) in
-                    if let error = error {
-                        print("Encountered an error while creating an attachment. Error:\(error)")
-                    } else {
-                        print("Created attachment \(response?["id"]) with revision id \(response?["rev"])")
-                    }
+                                                            if let error = error {
+                                                                print("Encountered an error while creating an attachment. Error:\(error)")
+                                                            } else {
+                                                                print("Created attachment \(response?["id"]) with revision id \(response?["rev"])")
+                                                            }
                 }
                 self.client.add(operation: putAttachment)
             }
         }
-       
+        
     }
     
     internal func deleteDocument(_ documentID: String,_ completionHandler:@escaping ((Bool) -> Void)) {
@@ -69,7 +67,7 @@ internal class CloudantAdapter {
                                                      databaseName: self.dbName) { (response, httpInfo, error) in
                                                         if let error = error {
                                                             print("Encountered an error while deleting a document. Error: \(error)")
-                                                             completionHandler(false)
+                                                            completionHandler(false)
                                                         } else {
                                                             completionHandler(true)
                                                         }
@@ -86,23 +84,36 @@ internal class CloudantAdapter {
         let readID = GetDocumentOperation(id: documentID, databaseName: dbName) { (response, httpInfo, error) in
             if let error = error {
                 print("Encountered an error while deleting a document. Error: \(error)")
-                 completionHandler("")
+                completionHandler("")
             } else {
                 completionHandler(response?["_rev"] as! String)
             }
-    }
+        }
         client.add(operation:readID)
     }
     
-    private func getImages(_ documentID: String, completionHandler:@escaping (([UIImage], Bool) -> Void)) {
-        let read = ReadAttachmentOperation(name: "image", documentID: documentID, databaseName: dbName){ (data, info, error) in
-            if let error = error {
-                completionHandler([], true)
-            } else {
-            //    self.image = UIImage(data: data!)!
+    internal func getImages(_ documentID: String, completionHandler:@escaping (([UIImage], Bool) -> Void)) {
+        
+        
+        var view = QueryViewOperation(name: "all", designDocumentID: "getimages", databaseName: dbName, rowHandler: { (row) in
+            let reteiveImage = ReadAttachmentOperation(name: "image", documentID: row["id"] as! String, databaseName: self.dbName){ (data, info, error) in
+                if let error = error {
+                    completionHandler([], false)
+                    
+                } else {
+                    print("success")
+                    let image = UIImage(data: data!)!
+                    image.accessibilityIdentifier = "Asdfdsa"
+                    self.images.append(image)
+                }
             }
-        }
-        client.add(operation:read)
+            self.client.add(operation: reteiveImage)
+        })
+        
+        
+        
+        
+        client.add(operation:view)
     }
     
     

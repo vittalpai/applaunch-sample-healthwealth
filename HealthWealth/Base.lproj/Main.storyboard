@@ -81,20 +81,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25r-7A-Ohn">
-                                <rect key="frame" x="70" y="265" width="193" height="75"/>
-                                <state key="normal" title="Show submissions"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="SbT-69-R53" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="66" y="289" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="HMV-M4-lnD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gau-sl-TNb"/>
+                                </constraints>
+                                <state key="normal" title="Show Submissions">
+                                    <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="ToQ-pq-beh" kind="show" id="T4c-Qg-iSY"/>
+                                    <action selector="log_in:" destination="kUS-yC-3b8" eventType="touchUpInside" id="CeD-Ri-XnW"/>
+                                    <segue destination="ToQ-pq-beh" kind="show" id="vre-n7-HWK"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVp-z8-EzK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyh-Nc-Plg">
+                                        <rect key="frame" x="15" y="40" width="21" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="ic_koloda">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfr-dD-rPE">
+                                        <rect key="frame" x="284" y="40" width="21" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="ic_undo">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoButtonTapped" destination="ToQ-pq-beh" eventType="touchUpInside" id="PwI-gs-YSz"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Submissions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhs-RX-OAm">
+                                        <rect key="frame" x="105" y="39" width="99" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75050950049999998" green="0.17824108899999999" blue="0.21366685630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="25r-7A-Ohn" firstAttribute="leading" secondItem="6SE-6p-PMo" secondAttribute="leading" constant="70" id="God-cc-0yq"/>
-                            <constraint firstItem="6SE-6p-PMo" firstAttribute="bottom" secondItem="25r-7A-Ohn" secondAttribute="bottom" constant="327" id="PFK-vj-Nbs"/>
-                            <constraint firstItem="25r-7A-Ohn" firstAttribute="top" secondItem="6SE-6p-PMo" secondAttribute="top" constant="245" id="lYq-G3-U42"/>
-                            <constraint firstItem="6SE-6p-PMo" firstAttribute="trailing" secondItem="25r-7A-Ohn" secondAttribute="trailing" constant="112" id="ttQ-5p-tNZ"/>
+                            <constraint firstItem="SbT-69-R53" firstAttribute="leading" secondItem="6SE-6p-PMo" secondAttribute="leading" constant="66" id="Agy-Yq-2iq"/>
+                            <constraint firstItem="SbT-69-R53" firstAttribute="top" secondItem="6SE-6p-PMo" secondAttribute="top" constant="269" id="KG7-Pm-Ptq"/>
+                            <constraint firstItem="iVp-z8-EzK" firstAttribute="top" secondItem="MdN-sS-FCp" secondAttribute="top" id="cI3-KL-IVm"/>
+                            <constraint firstItem="6SE-6p-PMo" firstAttribute="trailing" secondItem="iVp-z8-EzK" secondAttribute="trailing" constant="55" id="fHe-pX-C4Y"/>
+                            <constraint firstAttribute="bottom" secondItem="iVp-z8-EzK" secondAttribute="bottom" constant="593" id="iAJ-MS-GR9"/>
+                            <constraint firstItem="iVp-z8-EzK" firstAttribute="leading" secondItem="MdN-sS-FCp" secondAttribute="leading" id="w2w-Ch-qbR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6SE-6p-PMo"/>
                     </view>
@@ -215,6 +255,9 @@
                                         <state key="normal" image="ic_koloda">
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="fEV-PL-4TI" kind="show" id="Yyh-bA-s8z"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kX1-yN-CHQ">
                                         <rect key="frame" x="284" y="40" width="21" height="22"/>
@@ -291,4 +334,7 @@
         <image name="ic_skip" width="34" height="34"/>
         <image name="ic_undo" width="21" height="21"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vre-n7-HWK"/>
+    </inferredMetricsTieBreakers>
 </document>

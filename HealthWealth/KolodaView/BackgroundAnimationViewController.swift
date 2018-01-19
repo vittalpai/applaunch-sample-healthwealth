@@ -11,7 +11,6 @@ import Koloda
 import pop
 import SwiftCloudant
 
-private let numberOfCards: Int = 5
 private let frameAnimationSpringBounciness: CGFloat = 9
 private let frameAnimationSpringSpeed: CGFloat = 16
 private let kolodaCountOfVisibleCards = 2
@@ -21,17 +20,21 @@ class BackgroundAnimationViewController: UIViewController {
 
     @IBOutlet weak var kolodaView: CustomKolodaView!
     
-    var image:UIImage? = nil
-    
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
-        kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
-        kolodaView.delegate = self
-        kolodaView.dataSource = self
-        kolodaView.animator = BackgroundKolodaAnimator(koloda: kolodaView)
-        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        
+        CloudantAdapter.sharedInstance.getImages("4810db14-b83c-4018-be60-6c39c8ce7633", completionHandler: {(image, response) in
+            if(response) {
+                print("Successfully downloaded pic")
+                self.kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
+                self.kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
+                self.kolodaView.delegate = self
+                self.kolodaView.dataSource = self
+                self.kolodaView.animator = BackgroundKolodaAnimator(koloda: self.kolodaView)
+                self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+            }
+        })
     }
     
     
@@ -57,7 +60,7 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+     //   UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
     }
     
     func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool {
@@ -88,12 +91,11 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
     }
     
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-        return numberOfCards
+        return CloudantAdapter.sharedInstance.images.count
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: self.image)
-        
+        return UIImageView(image: CloudantAdapter.sharedInstance.images[index])
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
