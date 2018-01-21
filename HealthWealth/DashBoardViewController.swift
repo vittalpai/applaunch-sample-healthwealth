@@ -12,7 +12,7 @@ class DashBoardViewController: UITableViewController, UINavigationControllerDele
 {
     
     var imagePicker: UIImagePickerController!
-    static var menuItems = ["Health", "Medcines","Profile","Claims","Nearest Hospitals","Capture"]
+    static var menuItems = ["About My Doctor","Nearest Hospitals", "Prescriptions","Online Eye Checkup","My Medicines","First Aid Guide","Daily Dose","Emergency","Donate Organs"]
    
     
     override func viewDidLoad() {
@@ -44,17 +44,43 @@ class DashBoardViewController: UITableViewController, UINavigationControllerDele
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "prototype", for: indexPath) as! DashBoardTableViewCell
-        cell.cellImage.image = UIImage(named: ("gamburger"))
+        var imageName:String
+        switch DashBoardViewController.menuItems[indexPath.row] {
+        case "Nearest Hospitals":
+            imageName = "Hospital"
+        case "Prescriptions":
+             imageName = "Prescriptions"
+        case "My Medicines":
+             imageName = "Medicines"
+        case "About My Doctor":
+            imageName = "Doctor"
+        case "First Aid Guide":
+             imageName = "FirstAid"
+        case "Daily Dose":
+            imageName = "DailyDose"
+        case "Online Eye Checkup":
+            imageName = "EyeTest"
+        case "Today's Appointments":
+            imageName = "Schedules"
+        case "Review Submissions":
+            imageName = "Review"
+        case "Emergency":
+            imageName = "Ambulance"
+        case "Donate Organs":
+            imageName = "Donate"
+        default:
+            imageName = "FirstAid"
+        }
+        cell.cellImage.image = UIImage(named: (imageName))
         cell.cellLabel.text = DashBoardViewController.menuItems[indexPath.row]
         return (cell)
     }
     
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(DashBoardViewController.menuItems[indexPath.row] == "Capture") {
+        if(DashBoardViewController.menuItems[indexPath.row] == "Online Eye Checkup") {
             captureImage()
-        } else if (DashBoardViewController.menuItems[indexPath.row] == "Submissions") {
+        } else if (DashBoardViewController.menuItems[indexPath.row] == "Review Submissions") {
             if (CloudantAdapter.sharedInstance.images.count != 0) {
                 performSegue(withIdentifier: "submissions", sender: self)
             } else {

@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
             TokenStorageManager.sharedInstance.storeUserId(userId: accessToken?.subject)
             let name = identityToken?.name != nil ? identityToken?.name : ""
             if (name?.lowercased().starts(with: "v"))! {
-                DashBoardViewController.menuItems = ["Appointments", "Schedule","Submissions","Profile","Medicines","Daily Dose"]
+                DashBoardViewController.menuItems = ["Today's Appointments","Review Submissions","Nearest Hospitals","First Aid Guide","Daily Dose","Emergency","Donate Organs"]
             }
             let mainView  = UIApplication.shared.keyWindow?.rootViewController
             let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationView") as! UINavigationController

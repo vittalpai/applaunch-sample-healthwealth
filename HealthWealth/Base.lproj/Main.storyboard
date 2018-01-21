@@ -152,7 +152,7 @@
                                         <color key="textColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="5Al-bJ-Sxs">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstAid" translatesAutoresizingMaskIntoConstraints="NO" id="5Al-bJ-Sxs">
                                         <rect key="frame" x="75" y="34" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="YCa-Ke-aCu"/>
@@ -300,8 +300,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FirstAid" width="507" height="504"/>
         <image name="ic_like" width="38" height="34"/>
         <image name="ic_skip" width="34" height="34"/>
-        <image name="user" width="126" height="126"/>
     </resources>
 </document>

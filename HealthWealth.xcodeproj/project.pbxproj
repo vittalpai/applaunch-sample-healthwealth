@@ -15,7 +15,6 @@
 		C75E995A200DEEB50065A76C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75E9959200DEEB50065A76C /* LoginViewController.swift */; };
 		C75E995D200DEEB50065A76C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75E995B200DEEB50065A76C /* Main.storyboard */; };
 		C75E9962200DEEB50065A76C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75E9960200DEEB50065A76C /* LaunchScreen.storyboard */; };
-		C775E102201479950026F902 /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = C775E101201479940026F902 /* pizza.png */; };
 		C7934E5C200F22E1005892EE /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E5B200F22E1005892EE /* TokenStorage.swift */; };
 		C7934E622010798E005892EE /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7934E602010798D005892EE /* CustomOverlayView.xib */; };
 		C7934E6420107999005892EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7934E6320107999005892EE /* Images.xcassets */; };
@@ -37,7 +36,6 @@
 		C75E995C200DEEB50065A76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C75E9961200DEEB50065A76C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C75E9963200DEEB50065A76C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C775E101201479940026F902 /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
 		C7934E5B200F22E1005892EE /* TokenStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
 		C7934E602010798D005892EE /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		C7934E6320107999005892EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				C75E9963200DEEB50065A76C /* Info.plist */,
 				C7934E6320107999005892EE /* Images.xcassets */,
 				C759A2E520126CAB001E1C60 /* Utils.swift */,
-				C775E101201479940026F902 /* pizza.png */,
 			);
 			path = HealthWealth;
 			sourceTree = "<group>";
@@ -191,7 +188,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C775E102201479950026F902 /* pizza.png in Resources */,
 				C75E9962200DEEB50065A76C /* LaunchScreen.storyboard in Resources */,
 				C7934E622010798E005892EE /* CustomOverlayView.xib in Resources */,
 				C7934E6420107999005892EE /* Images.xcassets in Resources */,
