@@ -23,18 +23,12 @@ class BackgroundAnimationViewController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        CloudantAdapter.sharedInstance.getImages("4810db14-b83c-4018-be60-6c39c8ce7633", completionHandler: {(image, response) in
-            if(response) {
-                print("Successfully downloaded pic")
-                self.kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
-                self.kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
-                self.kolodaView.delegate = self
-                self.kolodaView.dataSource = self
-                self.kolodaView.animator = BackgroundKolodaAnimator(koloda: self.kolodaView)
-                self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-            }
-        })
+        self.kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
+        self.kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
+        self.kolodaView.delegate = self
+        self.kolodaView.dataSource = self
+        self.kolodaView.animator = BackgroundKolodaAnimator(koloda: self.kolodaView)
+        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
     }
     
     
@@ -56,7 +50,15 @@ class BackgroundAnimationViewController: UIViewController {
 extension BackgroundAnimationViewController: KolodaViewDelegate {
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        kolodaView.resetCurrentCardIndex()
+        //kolodaView.resetCurrentCardIndex()
+        let alert = UIAlertController(title: "Alert", message: "Thanks for the review", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            //Clear Stored Images
+            CloudantAdapter.sharedInstance.images = [UIImage]()
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true)
+       
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {

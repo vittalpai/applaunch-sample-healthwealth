@@ -6,5 +6,4 @@ target 'HealthWealth' do
 	pod 'BluemixAppID'
   	pod 'SwiftCloudant'
   	pod 'Koloda'
-  	pod 'SwiftyButton'
 end

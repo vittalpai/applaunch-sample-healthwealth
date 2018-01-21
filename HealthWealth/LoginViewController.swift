@@ -9,18 +9,13 @@
 import UIKit
 import BluemixAppID
 import BMSCore
-import SwiftyButton
 
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true;
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let button = PressableButton()
-        button.colors = .init(button: .cyan, shadow: .blue)
-        button.shadowHeight = 5
-        button.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,43 +39,33 @@ class LoginViewController: UIViewController {
                 TokenStorageManager.sharedInstance.clearStoredToken()
             }
             TokenStorageManager.sharedInstance.storeUserId(userId: accessToken?.subject)
-            Utils.dismissOverlay(viewController)
             let name = identityToken?.name != nil ? identityToken?.name : ""
             if (name?.lowercased().starts(with: "v"))! {
-                let mainView  = UIApplication.shared.keyWindow?.rootViewController
-                let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DoctorView") as? DoctorViewController
-                DispatchQueue.main.async {
-                    mainView?.present(afterLoginView!, animated: true, completion: nil)
-                }
-            } else {
-                let mainView  = UIApplication.shared.keyWindow?.rootViewController
-                let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashBoardView") as? DashBoardViewController
-                DispatchQueue.main.async {
-                    mainView?.present(afterLoginView!, animated: true, completion: nil)
-                }
+                DashBoardViewController.menuItems = ["Appointments", "Schedule","Submissions","Profile","Medicines","Daily Dose"]
             }
+            let mainView  = UIApplication.shared.keyWindow?.rootViewController
+            let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationView") as! UINavigationController
+            DispatchQueue.main.async {
+                mainView?.present(afterLoginView, animated: true, completion: nil)
+                }
            
         }
        
         
         public func onAuthorizationCanceled() {
             print("cancel")
-            Utils.dismissOverlay(viewController)
         }
         
         public func onAuthorizationFailure(error: AuthorizationError) {
             print(error)
-            Utils.dismissOverlay(viewController)
         }
     }
     @IBAction func login_anonymously(_ sender: AnyObject) {
-        Utils.showOverlay(self)
         let token = TokenStorageManager.sharedInstance.loadStoredToken()
         AppID.sharedInstance.loginAnonymously(accessTokenString: token, authorizationDelegate: delegate(viewController: self))
     }
   
     @IBAction func log_in(_ sender: AnyObject) {
-        Utils.showOverlay(self)
         let token = TokenStorageManager.sharedInstance.loadStoredToken()
         AppID.sharedInstance.loginWidget?.launch(accessTokenString: token, delegate: delegate(viewController: self))
         

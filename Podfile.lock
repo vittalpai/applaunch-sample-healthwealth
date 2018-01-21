@@ -8,13 +8,11 @@ PODS:
     - pop (~> 1.0)
   - pop (1.0.10)
   - SwiftCloudant (0.7.0)
-  - SwiftyButton (0.8.0)
 
 DEPENDENCIES:
   - BluemixAppID
   - Koloda
   - SwiftCloudant
-  - SwiftyButton
 
 SPEC CHECKSUMS:
   BluemixAppID: fff1538e4a29c695539c466dc3395fbe9f1bd9d8
@@ -23,8 +21,7 @@ SPEC CHECKSUMS:
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SwiftCloudant: aa907d56a97f80181c6dc572ed7fdb8dc5e5d124
-  SwiftyButton: 093e3fe2becf3ae31c0f6c1c6987b79a93fb3ecb
 
-PODFILE CHECKSUM: b55d57720385dfcad070ad82dd6ba6deb43057b1
+PODFILE CHECKSUM: 3b714724d6b8a3f0d4d58b2e182068aa720b3cb6
 
 COCOAPODS: 1.3.1

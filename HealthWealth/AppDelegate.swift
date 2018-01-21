@@ -9,6 +9,7 @@
 import UIKit
 import BluemixAppID
 import BMSCore
+import UIKit
 
 
 @UIApplicationMain
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let appIdAuthorizationManager = AppIDAuthorizationManager(appid:appid)
         bmsclient.authorizationManager = appIdAuthorizationManager
         TokenStorageManager.sharedInstance.initialize(tenantId: backendGUID)
+        
         return true
     }
     
