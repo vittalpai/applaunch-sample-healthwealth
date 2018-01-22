@@ -17,7 +17,6 @@ class DashBoardViewController: UITableViewController, UINavigationControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
         self.tableView.rowHeight = 130
         Utils.showOverlay(self)
         CloudantAdapter.sharedInstance.createDocument(TokenStorageManager.sharedInstance.loadUserId()!,  { (response) in
@@ -79,7 +78,9 @@ class DashBoardViewController: UITableViewController, UINavigationControllerDele
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(DashBoardViewController.menuItems[indexPath.row] == "Online Eye Checkup") {
-            captureImage()
+            let alert = UIAlertController(title: "Eye Image Submission Instructions", message: "Put your camera on manual focus and aim it at the iris. Click picture and submit it for review.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:  captureImage))
+            self.present(alert, animated: true)
         } else if (DashBoardViewController.menuItems[indexPath.row] == "Review Submissions") {
             if (CloudantAdapter.sharedInstance.images.count != 0) {
                 performSegue(withIdentifier: "submissions", sender: self)
@@ -91,7 +92,7 @@ class DashBoardViewController: UITableViewController, UINavigationControllerDele
         }
     }
     
-    private func captureImage() {
+    private func captureImage(action: UIAlertAction!) {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
@@ -103,9 +104,9 @@ class DashBoardViewController: UITableViewController, UINavigationControllerDele
         Utils.showOverlay(self)
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage!
         CloudantAdapter.sharedInstance.addImage(TokenStorageManager.sharedInstance.loadUserId()!, (image?.resized(withPercentage: 0.1)!.pngRepresentationData!)!,{ (response) in
+             Utils.dismissOverlay(self)
             if(response) {
-                Utils.dismissOverlay(self)
-                print("Successfully uploaded image")
+                self.showAlert("Successfully uploaded image for review. We will get back to you shortly.")
             }
         })
     }

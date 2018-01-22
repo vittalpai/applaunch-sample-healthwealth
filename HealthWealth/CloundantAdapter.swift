@@ -48,8 +48,10 @@ internal class CloudantAdapter {
                                                            databaseName: self.dbName) { (response, info, error) in
                                                             if let error = error {
                                                                 print("Encountered an error while creating an attachment. Error:\(error)")
+                                                                completionHandler(false)
                                                             } else {
                                                                 print("Created attachment \(response?["id"]) with revision id \(response?["rev"])")
+                                                                completionHandler(true)
                                                             }
                 }
                 self.client.add(operation: putAttachment)
