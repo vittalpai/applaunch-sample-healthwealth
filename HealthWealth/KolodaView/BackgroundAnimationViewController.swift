@@ -13,36 +13,36 @@ import SwiftCloudant
 
 private let frameAnimationSpringBounciness: CGFloat = 9
 private let frameAnimationSpringSpeed: CGFloat = 16
-private let kolodaCountOfVisibleCards = 2
-private let kolodaAlphaValueSemiTransparent: CGFloat = 0.1
+private let CountOfVisibleCards = 2
+private let AlphaValueSemiTransparent: CGFloat = 0.1
 
 class BackgroundAnimationViewController: UIViewController {
 
-    @IBOutlet weak var kolodaView: CustomKolodaView!
+    @IBOutlet weak var SwipeView: CustomView!
     
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.kolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
-        self.kolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
-        self.kolodaView.delegate = self
-        self.kolodaView.dataSource = self
-        self.kolodaView.animator = BackgroundKolodaAnimator(koloda: self.kolodaView)
+        self.SwipeView.alphaValueSemiTransparent = AlphaValueSemiTransparent
+        self.SwipeView.countOfVisibleCards = CountOfVisibleCards
+        self.SwipeView.delegate = self
+        self.SwipeView.dataSource = self
+        self.SwipeView.animator = BackgroundAnimator(koloda: self.SwipeView)
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
     }
     
     
     //MARK: IBActions
     @IBAction func leftButtonTapped() {
-        kolodaView?.swipe(.left)
+        SwipeView?.swipe(.left)
     }
     
     @IBAction func rightButtonTapped() {
-        kolodaView?.swipe(.right)
+        SwipeView?.swipe(.right)
     }
     
     @IBAction func undoButtonTapped() {
-        kolodaView?.revertAction()
+        SwipeView?.revertAction()
     }
 }
 

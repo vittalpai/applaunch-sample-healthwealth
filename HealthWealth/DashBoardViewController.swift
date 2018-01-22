@@ -8,10 +8,9 @@
 
 import UIKit
 
-class DashBoardViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate
+class DashBoardViewController: UITableViewController
 {
     
-    var imagePicker: UIImagePickerController!
     static var menuItems = ["About My Doctor","Nearest Hospitals", "Prescriptions","Online Eye Checkup","My Medicines","First Aid Guide","Daily Dose","Emergency","Donate Organs"]
    
     
@@ -78,9 +77,7 @@ class DashBoardViewController: UITableViewController, UINavigationControllerDele
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(DashBoardViewController.menuItems[indexPath.row] == "Online Eye Checkup") {
-            let alert = UIAlertController(title: "Eye Image Submission Instructions", message: "Put your camera on manual focus and aim it at the iris. Click picture and submit it for review.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:  captureImage))
-            self.present(alert, animated: true)
+            performSegue(withIdentifier: "examineEye", sender: self)
         } else if (DashBoardViewController.menuItems[indexPath.row] == "Review Submissions") {
             if (CloudantAdapter.sharedInstance.images.count != 0) {
                 performSegue(withIdentifier: "submissions", sender: self)
@@ -91,27 +88,6 @@ class DashBoardViewController: UITableViewController, UINavigationControllerDele
             showAlert("This feature is yet to be implemented")
         }
     }
-    
-    private func captureImage(action: UIAlertAction!) {
-        imagePicker =  UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        imagePicker.dismiss(animated: true, completion: nil)
-        Utils.showOverlay(self)
-        let image = info[UIImagePickerControllerOriginalImage] as? UIImage!
-        CloudantAdapter.sharedInstance.addImage(TokenStorageManager.sharedInstance.loadUserId()!, (image?.resized(withPercentage: 0.1)!.pngRepresentationData!)!,{ (response) in
-             Utils.dismissOverlay(self)
-            if(response) {
-                self.showAlert("Successfully uploaded image for review. We will get back to you shortly.")
-            }
-        })
-    }
-    
-  
     
     func showAlert(_ message: String) {
         let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)

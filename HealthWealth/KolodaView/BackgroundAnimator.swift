@@ -1,5 +1,5 @@
 //
-//  BackgroundKolodaAnimator.swift
+//  BackgroundAnimator.swift
 //  Koloda
 //
 //  Created by Eugene Andreyev on 4/2/16.
@@ -10,7 +10,7 @@ import Foundation
 import Koloda
 import pop
 
-class BackgroundKolodaAnimator: KolodaViewAnimator {
+class BackgroundAnimator: KolodaViewAnimator {
     
     override func applyScaleAnimation(_ card: DraggableCardView, scale: CGSize, frame: CGRect, duration: TimeInterval, completion: AnimationCompletionBlock) {
         

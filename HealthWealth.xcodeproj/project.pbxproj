@@ -19,10 +19,11 @@
 		C7934E622010798E005892EE /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7934E602010798D005892EE /* CustomOverlayView.xib */; };
 		C7934E6420107999005892EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7934E6320107999005892EE /* Images.xcassets */; };
 		C7934E6620107BEE005892EE /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E6520107BEE005892EE /* BackgroundAnimationViewController.swift */; };
-		C7934E6820107C52005892EE /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E6720107C52005892EE /* CustomKolodaView.swift */; };
+		C7934E6820107C52005892EE /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E6720107C52005892EE /* CustomView.swift */; };
 		C7934E6A20107C5C005892EE /* CustomOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E6920107C5C005892EE /* CustomOverlayView.swift */; };
-		C7934E6C20107C74005892EE /* BackgroundKolodaAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E6B20107C74005892EE /* BackgroundKolodaAnimator.swift */; };
+		C7934E6C20107C74005892EE /* BackgroundAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E6B20107C74005892EE /* BackgroundAnimator.swift */; };
 		C7CBF7272010C8FA0064FAF2 /* CloundantAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CBF7262010C8FA0064FAF2 /* CloundantAdapter.swift */; };
+		C7DDD6682015D7FF00521C7A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD6672015D7FF00521C7A /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +41,11 @@
 		C7934E602010798D005892EE /* CustomOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlayView.xib; sourceTree = "<group>"; };
 		C7934E6320107999005892EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7934E6520107BEE005892EE /* BackgroundAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimationViewController.swift; sourceTree = "<group>"; };
-		C7934E6720107C52005892EE /* CustomKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
+		C7934E6720107C52005892EE /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		C7934E6920107C5C005892EE /* CustomOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlayView.swift; sourceTree = "<group>"; };
-		C7934E6B20107C74005892EE /* BackgroundKolodaAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundKolodaAnimator.swift; sourceTree = "<group>"; };
+		C7934E6B20107C74005892EE /* BackgroundAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimator.swift; sourceTree = "<group>"; };
 		C7CBF7262010C8FA0064FAF2 /* CloundantAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloundantAdapter.swift; sourceTree = "<group>"; };
+		C7DDD6672015D7FF00521C7A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		E3541C1EE534DE133F972AA6 /* Pods_HealthWealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthWealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1447A880DB6BBA13759CC32 /* Pods-HealthWealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthWealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthWealth/Pods-HealthWealth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 				C75E9963200DEEB50065A76C /* Info.plist */,
 				C7934E6320107999005892EE /* Images.xcassets */,
 				C759A2E520126CAB001E1C60 /* Utils.swift */,
+				C7DDD6672015D7FF00521C7A /* CameraViewController.swift */,
 			);
 			path = HealthWealth;
 			sourceTree = "<group>";
@@ -109,9 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				C7934E6520107BEE005892EE /* BackgroundAnimationViewController.swift */,
-				C7934E6720107C52005892EE /* CustomKolodaView.swift */,
+				C7934E6720107C52005892EE /* CustomView.swift */,
 				C7934E6920107C5C005892EE /* CustomOverlayView.swift */,
-				C7934E6B20107C74005892EE /* BackgroundKolodaAnimator.swift */,
+				C7934E6B20107C74005892EE /* BackgroundAnimator.swift */,
 				C7934E602010798D005892EE /* CustomOverlayView.xib */,
 			);
 			path = KolodaView;
@@ -266,11 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7934E6C20107C74005892EE /* BackgroundKolodaAnimator.swift in Sources */,
-				C7934E6820107C52005892EE /* CustomKolodaView.swift in Sources */,
+				C7934E6C20107C74005892EE /* BackgroundAnimator.swift in Sources */,
+				C7934E6820107C52005892EE /* CustomView.swift in Sources */,
 				C7CBF7272010C8FA0064FAF2 /* CloundantAdapter.swift in Sources */,
 				C7934E6A20107C5C005892EE /* CustomOverlayView.swift in Sources */,
 				C75E995A200DEEB50065A76C /* LoginViewController.swift in Sources */,
+				C7DDD6682015D7FF00521C7A /* CameraViewController.swift in Sources */,
 				C759A2E620126CAB001E1C60 /* Utils.swift in Sources */,
 				C7934E6620107BEE005892EE /* BackgroundAnimationViewController.swift in Sources */,
 				C759A2F02013C049001E1C60 /* DashBoardViewController.swift in Sources */,

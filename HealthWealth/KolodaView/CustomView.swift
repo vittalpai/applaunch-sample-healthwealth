@@ -15,7 +15,7 @@ let defaultHeightRatio: CGFloat = 1.25
 let backgroundCardHorizontalMarginMultiplier: CGFloat = 0.25
 let backgroundCardScalePercent: CGFloat = 1.5
 
-class CustomKolodaView: KolodaView {
+class CustomView: KolodaView {
 
     override func frameForCard(at index: Int) -> CGRect {
         if index == 0 {

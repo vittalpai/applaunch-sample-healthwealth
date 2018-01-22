@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ee4-Hv-TSN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2VG-mK-nzh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,12 +52,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-0Q-LOC" customClass="CustomKolodaView" customModule="HealthWealth" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfy-0Q-LOC" customClass="CustomView" customModule="HealthWealth" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.75294117650000003" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6d-Jx-BuE">
-                                <rect key="frame" x="76" y="504" width="34" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6d-Jx-BuE">
+                                <rect key="frame" x="103" y="603" width="34" height="34"/>
                                 <state key="normal" image="ic_skip">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -64,8 +65,8 @@
                                     <action selector="leftButtonTapped" destination="ToQ-pq-beh" eventType="touchUpInside" id="csg-kd-qs5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y9-9K-ZAx">
-                                <rect key="frame" x="211" y="505" width="38" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y9-9K-ZAx">
+                                <rect key="frame" x="238" y="604" width="38" height="34"/>
                                 <state key="normal" image="ic_like">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -73,8 +74,8 @@
                                     <action selector="rightButtonTapped" destination="ToQ-pq-beh" eventType="touchUpInside" id="PVg-66-ZGf"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gom-As-r6l">
-                                <rect key="frame" x="160" y="504" width="1" height="34"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gom-As-r6l">
+                                <rect key="frame" x="187" y="603" width="1" height="34"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="CF9-vf-DDf"/>
@@ -104,12 +105,12 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="kolodaView" destination="sfy-0Q-LOC" id="ZZB-8S-QqS"/>
+                        <outlet property="SwipeView" destination="sfy-0Q-LOC" id="ZZB-8S-QqS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfQ-Kt-wBu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256.8" y="635.53223388305855"/>
+            <point key="canvasLocation" x="1143" y="1"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nOW-YQ-Lcf">
@@ -292,11 +293,79 @@
                     </navigationItem>
                     <connections>
                         <segue destination="ToQ-pq-beh" kind="show" identifier="submissions" id="7Hs-el-J6r"/>
+                        <segue destination="sQ7-cv-TtF" kind="show" identifier="examineEye" id="PX1-aC-8cg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Hq-sp-KAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="316" y="635.53223388305855"/>
+        </scene>
+        <!--Eye Submission-->
+        <scene sceneID="s8P-P2-6cW">
+            <objects>
+                <viewController title="Eye Submission" id="sQ7-cv-TtF" customClass="CameraViewController" customModule="HealthWealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="capture" id="23z-qa-cIo" customClass="ADBannerView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQp-HE-7Bp">
+                                <rect key="frame" x="38" y="182" width="299" height="337"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="299" id="pGl-cB-ehW"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.075269670050761461" green="0.075269670050761461" blue="0.075269670050761461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examine my Eye" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg8-TS-4u0">
+                                <rect key="frame" x="50" y="103" width="275" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="91R-Jz-hDV"/>
+                                    <constraint firstAttribute="width" constant="275" id="FxL-J1-wRB"/>
+                                    <constraint firstAttribute="width" secondItem="Xg8-TS-4u0" secondAttribute="height" multiplier="55:9" id="WdP-4f-PWw"/>
+                                    <constraint firstAttribute="width" secondItem="Xg8-TS-4u0" secondAttribute="height" multiplier="55:9" id="jyk-J2-pp3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KvC-DP-nHK">
+                                <rect key="frame" x="116" y="590" width="142" height="46"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="E9s-gA-5Y9"/>
+                                    <constraint firstAttribute="width" secondItem="KvC-DP-nHK" secondAttribute="height" multiplier="71:23" id="iH1-sm-4RZ"/>
+                                    <constraint firstAttribute="height" constant="46" id="zyj-hb-vWg"/>
+                                </constraints>
+                                <state key="normal" title="Capture Image">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraBtnTapped:" destination="sQ7-cv-TtF" eventType="touchUpInside" id="snR-f3-z73"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.75294117650000003" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rQp-HE-7Bp" firstAttribute="leading" secondItem="Ich-db-ebm" secondAttribute="leading" constant="38" id="6Xx-vL-ICw"/>
+                            <constraint firstItem="rQp-HE-7Bp" firstAttribute="top" secondItem="Xg8-TS-4u0" secondAttribute="bottom" constant="34" id="FD1-3o-mgy"/>
+                            <constraint firstItem="Xg8-TS-4u0" firstAttribute="top" secondItem="Ich-db-ebm" secondAttribute="top" constant="39" id="JDX-Fq-V7s"/>
+                            <constraint firstItem="KvC-DP-nHK" firstAttribute="top" secondItem="rQp-HE-7Bp" secondAttribute="bottom" constant="71" id="Jyk-gg-nyW"/>
+                            <constraint firstItem="KvC-DP-nHK" firstAttribute="leading" secondItem="Ich-db-ebm" secondAttribute="leading" constant="116" id="PdZ-Lt-mBn"/>
+                            <constraint firstItem="Ich-db-ebm" firstAttribute="trailing" secondItem="rQp-HE-7Bp" secondAttribute="trailing" constant="38" id="WRo-Pa-QzJ"/>
+                            <constraint firstItem="Ich-db-ebm" firstAttribute="bottom" secondItem="KvC-DP-nHK" secondAttribute="bottom" constant="31" id="ccP-l0-ofC"/>
+                            <constraint firstItem="Ich-db-ebm" firstAttribute="trailing" secondItem="Xg8-TS-4u0" secondAttribute="trailing" constant="50" id="j8u-l8-1sF"/>
+                            <constraint firstItem="Ich-db-ebm" firstAttribute="trailing" secondItem="KvC-DP-nHK" secondAttribute="trailing" constant="117" id="n0g-1x-1aG"/>
+                            <constraint firstItem="Xg8-TS-4u0" firstAttribute="leading" secondItem="Ich-db-ebm" secondAttribute="leading" constant="50" id="qkf-Ej-nsZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ich-db-ebm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONb-4w-EcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1197.5999999999999" y="750.67466266866575"/>
         </scene>
     </scenes>
     <resources>
