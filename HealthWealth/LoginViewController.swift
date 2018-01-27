@@ -14,14 +14,14 @@ import NVActivityIndicatorView
 class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     private var isShowingOverlay:Bool = false
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true;
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
             let mailID = identityToken?.email != nil ? identityToken?.email : ""
             let name = identityToken?.name != nil ? identityToken?.name : (accessToken?.subject != nil ? accessToken?.subject : "guest")
             TokenStorageManager.sharedInstance.storeUserId(userId: name)
-           
+            
             CloudantAdapter.sharedInstance.isDoctor(mailID!) { (resp) in
                 var userType = ""
                 if(resp) {
@@ -59,7 +59,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
                 AppLaunchAdapter.sharedInstance.initialize(username: name!, userType: userType, completionHandler: { (Success, Failure) in
                     if (Success != nil) {
                         self.viewController.checkForEnabledFeatures({ (resp) in
-                           self.viewController.changeOverlayMessage("Preparing DashBoard..")
+                            self.viewController.changeOverlayMessage("Preparing DashBoard..")
                             CloudantAdapter.sharedInstance.createDocument(TokenStorageManager.sharedInstance.loadUserId()!,  { (response) in
                                 if(response) {
                                     if AppLaunchAdapter.sharedInstance.isSubmissionMenuEnabled() && MenuItems.isDoctorFlagEnabled {
@@ -101,7 +101,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         let token = TokenStorageManager.sharedInstance.loadStoredToken()
         AppID.sharedInstance.loginAnonymously(accessTokenString: token, authorizationDelegate: delegate(viewController: self))
     }
-  
+    
     @IBAction func log_in(_ sender: AnyObject) {
         let token = TokenStorageManager.sharedInstance.loadStoredToken()
         AppID.sharedInstance.loginWidget?.launch(accessTokenString: token, delegate: delegate(viewController: self))
@@ -123,7 +123,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         }
         let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {
-             completionHandler(true)
+            completionHandler(true)
         }
     }
     
@@ -150,7 +150,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "NavigationView") as! UINavigationController
         self.present(vc, animated: true, completion: nil)
     }
-
-
+    
+    
 }
 

@@ -35,7 +35,7 @@ public class TokenStorageManager {
     public func loadStoredToken() -> String? {
         return load(key: tokenServiceName + tenantId!)
     }
-
+    
     public func storeUserId(userId: String?) {
         save(key: userIdServiceName + tenantId!, value: userId)
     }

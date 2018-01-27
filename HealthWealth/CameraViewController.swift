@@ -10,14 +10,14 @@ import UIKit
 import NVActivityIndicatorView
 
 class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, NVActivityIndicatorViewable {
-
+    
     var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = MenuItems.backgroundColor
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -39,7 +39,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
             if(response) {
                 let alert = UIAlertController(title: "Alert", message: "Successfully uploaded image for review. We will get back to you shortly.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
-                     self.navigationController?.popViewController(animated: true)
+                    self.navigationController?.popViewController(animated: true)
                 }))
                 self.present(alert, animated: true)
             }
@@ -54,7 +54,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     internal func removeOverlay() {
         self.stopAnimating()
     }
-
+    
 }
 
 
@@ -77,5 +77,5 @@ extension UIImage {
     var pngRepresentationData: Data? {
         return UIImagePNGRepresentation(self)
     }
-
+    
 }

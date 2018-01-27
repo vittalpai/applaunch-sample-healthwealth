@@ -56,16 +56,38 @@ class DashBoardViewController: UITableViewController, NVActivityIndicatorViewabl
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    static var isDoctorFlagEnabled: Bool = false
+    static var onlineEyeTestFeatureName: String = "Online Eye Checkup"
+    static var reviewSubmissionsFeatureName: String = "Review Submissions"
+    static var backgroundColor: UIColor =  hexStringToUIColor("#FEC058")
     
+    static var normalMenu:[String] = [
+        "About My Doctor",
+        "Nearest Hospitals",
+        "Prescriptions",
+        "My Medicines",
+        "First Aid Guide",
+        "Daily Dose",
+        "Emergency",
+        "Donate Organs"]
+    
+    static var doctorMenu:[String] = [
+        "Today's Appointments",
+        "Nearest Hospitals",
+        "First Aid Guide",
+        "Daily Dose",
+        "Emergency",
+        "Donate Organs"]
     @IBAction func logout(_ sender: Any) {
+        MenuItems.resetMenu()
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginBarView") as! UINavigationController
         self.present(vc, animated: true, completion: nil)
     }
     
     internal func showOverlay() {
-            let size = CGSize(width: 30, height: 30)
-            startAnimating(size, message: "Loading...", type: .lineScale)
+        let size = CGSize(width: 30, height: 30)
+        startAnimating(size, message: "Loading...", type: .lineScale)
     }
     
     internal func changeOverlayMessage(_ message: String) {

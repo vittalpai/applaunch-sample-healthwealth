@@ -36,9 +36,9 @@ internal class MenuItems:NSObject  {
     
     class func getMenuItems() -> [String] {
         if(isDoctorFlagEnabled) {
-           return self.doctorMenu
+            return self.doctorMenu
         }
-       return self.normalMenu
+        return self.normalMenu
     }
     
     class func addReviewFeature(name: String) {
@@ -53,6 +53,29 @@ internal class MenuItems:NSObject  {
     
     class func changeBackgroundColor(color: String) {
         self.backgroundColor = hexStringToUIColor(color)
+    }
+    
+    class func resetMenu() {
+        isDoctorFlagEnabled = false
+        onlineEyeTestFeatureName = "Online Eye Checkup"
+        reviewSubmissionsFeatureName = "Review Submissions"
+        backgroundColor =  hexStringToUIColor("#FEC058")
+        normalMenu = [
+            "About My Doctor",
+            "Nearest Hospitals",
+            "Prescriptions",
+            "My Medicines",
+            "First Aid Guide",
+            "Daily Dose",
+            "Emergency",
+            "Donate Organs"]
+        doctorMenu = [
+            "Today's Appointments",
+            "Nearest Hospitals",
+            "First Aid Guide",
+            "Daily Dose",
+            "Emergency",
+            "Donate Organs"]
     }
     
     class func hexStringToUIColor (_ hex:String) -> UIColor {
