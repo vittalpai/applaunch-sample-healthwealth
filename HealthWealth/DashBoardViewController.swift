@@ -32,6 +32,7 @@ class DashBoardViewController: UITableViewController, NVActivityIndicatorViewabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "prototype", for: indexPath) as! DashBoardTableViewCell
         cell.cellImage.image = UIImage(named: (MenuItems.getImageName(MenuItems.getMenuItems()[indexPath.row])))
         cell.cellLabel.text = MenuItems.getMenuItems()[indexPath.row]
+        cell.cellView.backgroundColor = MenuItems.backgroundColor
         return (cell)
     }
     

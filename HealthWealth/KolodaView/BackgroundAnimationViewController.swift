@@ -23,6 +23,7 @@ class BackgroundAnimationViewController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = MenuItems.backgroundColor
         self.SwipeView.alphaValueSemiTransparent = AlphaValueSemiTransparent
         self.SwipeView.countOfVisibleCards = CountOfVisibleCards
         self.SwipeView.delegate = self

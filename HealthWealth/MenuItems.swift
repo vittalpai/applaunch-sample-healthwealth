@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 internal class MenuItems:NSObject  {
     
     static var isDoctorFlagEnabled: Bool = false
     static var onlineEyeTestFeatureName: String = "Online Eye Checkup"
     static var reviewSubmissionsFeatureName: String = "Review Submissions"
+    static var backgroundColor: UIColor =  hexStringToUIColor("#FEC058")
     
     static var normalMenu:[String] = [
         "About My Doctor",
@@ -47,6 +49,31 @@ internal class MenuItems:NSObject  {
     class func addOnlineEyeTestFeature(name: String) {
         onlineEyeTestFeatureName = name
         normalMenu.insert(name, at: 5)
+    }
+    
+    class func changeBackgroundColor(color: String) {
+        self.backgroundColor = hexStringToUIColor(color)
+    }
+    
+    class func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0))
     }
     
     class func getImageName(_ menu : String) -> String {

@@ -16,6 +16,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true;
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -105,11 +106,17 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     internal func checkForEnabledFeatures(_ completionHandler:@escaping ((Bool) -> Void)) {
+        // Check whether online eye test menu enabled
         if(AppLaunchAdapter.sharedInstance.isOnlineEyeTestMenuEnabled()) {
             MenuItems.addOnlineEyeTestFeature(name: AppLaunchAdapter.sharedInstance.getOnlineEyeTestMenuName())
         }
+        // Check whether Submission Menu is enabled
         if(AppLaunchAdapter.sharedInstance.isSubmissionMenuEnabled() && MenuItems.isDoctorFlagEnabled) {
             MenuItems.addReviewFeature(name: AppLaunchAdapter.sharedInstance.getSubmissionMenuName())
+        }
+        // Update Background Color
+        if(AppLaunchAdapter.sharedInstance.isBackgroundColorChanged()) {
+            MenuItems.changeBackgroundColor(color: AppLaunchAdapter.sharedInstance.getBackGroundColor())
         }
         let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when) {

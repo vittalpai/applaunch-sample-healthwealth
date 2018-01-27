@@ -51,6 +51,22 @@ internal class AppLaunchAdapter {
         }
     }
     
+    internal func isBackgroundColorChanged() -> Bool {
+        do {
+            return try AppLaunch.sharedInstance.isFeatureEnabled(featureCode: "_6deefh571")
+        } catch {
+            return false
+        }
+    }
+    
+    internal func getBackGroundColor() -> String {
+        do {
+            return try AppLaunch.sharedInstance.getPropertyofFeature(featureCode: "_6deefh571", propertyCode: "_g2kgxscod")
+        } catch {
+            return "#FEC058"
+        }
+    }
+    
     
     internal func destroy() {
         AppLaunch.sharedInstance.destroy { (Success, Failure) in

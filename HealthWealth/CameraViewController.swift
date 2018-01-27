@@ -15,8 +15,7 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = MenuItems.backgroundColor
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,4 +77,5 @@ extension UIImage {
     var pngRepresentationData: Data? {
         return UIImagePNGRepresentation(self)
     }
+
 }
