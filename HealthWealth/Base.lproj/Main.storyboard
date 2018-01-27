@@ -112,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="1143" y="1"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--LoginBarView-->
         <scene sceneID="nOW-YQ-Lcf">
             <objects>
-                <navigationController id="ee4-Hv-TSN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginBarView" id="ee4-Hv-TSN" userLabel="LoginBarView" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="ED9-UU-uk7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -289,7 +289,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="DashBoard" id="vuz-iG-aqJ">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="V6H-tH-wUj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="V6H-tH-wUj">
+                            <connections>
+                                <action selector="logout:" destination="QWA-rM-boL" id="Pn3-b2-3Ow"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="ToQ-pq-beh" kind="show" identifier="submissions" id="7Hs-el-J6r"/>

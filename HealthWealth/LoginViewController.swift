@@ -12,6 +12,8 @@ import BMSCore
 import NVActivityIndicatorView
 
 class LoginViewController: UIViewController, NVActivityIndicatorViewable {
+    
+    private var isShowingOverlay:Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +97,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         }
     }
     @IBAction func login_anonymously(_ sender: AnyObject) {
+        showOverlay()
         let token = TokenStorageManager.sharedInstance.loadStoredToken()
         AppID.sharedInstance.loginAnonymously(accessTokenString: token, authorizationDelegate: delegate(viewController: self))
     }
@@ -125,8 +128,12 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     internal func showOverlay() {
-        let size = CGSize(width: 30, height: 30)
-        startAnimating(size, message: "Loading...", type: .lineScale)
+        if (!isShowingOverlay) {
+            let size = CGSize(width: 30, height: 30)
+            startAnimating(size, message: "Loading...", type: .lineScale)
+            isShowingOverlay = true
+        }
+        
     }
     
     internal func changeOverlayMessage(_ message: String) {
@@ -135,14 +142,13 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
     
     internal func removeOverlay() {
         self.stopAnimating()
+        isShowingOverlay = false
     }
     
     internal func displayDashBoardView() {
-        let mainView  = UIApplication.shared.keyWindow?.rootViewController
-        let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationView") as! UINavigationController
-        DispatchQueue.main.async {
-            mainView?.present(afterLoginView, animated: true, completion: nil)
-        }
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "NavigationView") as! UINavigationController
+        self.present(vc, animated: true, completion: nil)
     }
 
 

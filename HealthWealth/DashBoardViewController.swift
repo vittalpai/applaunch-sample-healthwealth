@@ -57,6 +57,12 @@ class DashBoardViewController: UITableViewController, NVActivityIndicatorViewabl
         self.present(alert, animated: true)
     }
     
+    @IBAction func logout(_ sender: Any) {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginBarView") as! UINavigationController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     internal func showOverlay() {
             let size = CGSize(width: 30, height: 30)
             startAnimating(size, message: "Loading...", type: .lineScale)
