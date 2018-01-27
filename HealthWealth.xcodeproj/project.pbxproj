@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A37A4A342AA50FA5F2F0105 /* Pods_HealthWealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3541C1EE534DE133F972AA6 /* Pods_HealthWealth.framework */; };
-		C759A2E620126CAB001E1C60 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759A2E520126CAB001E1C60 /* Utils.swift */; };
+		C719736B20185BED00B8CBA2 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C719736A20185BED00B8CBA2 /* MenuItems.swift */; };
 		C759A2F02013C049001E1C60 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759A2EF2013C049001E1C60 /* DashBoardViewController.swift */; };
 		C759A2F220146B71001E1C60 /* DashBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C759A2F120146B71001E1C60 /* DashBoardTableViewCell.swift */; };
 		C75E9958200DEEB50065A76C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75E9957200DEEB50065A76C /* AppDelegate.swift */; };
@@ -24,11 +24,12 @@
 		C7934E6C20107C74005892EE /* BackgroundAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7934E6B20107C74005892EE /* BackgroundAnimator.swift */; };
 		C7CBF7272010C8FA0064FAF2 /* CloundantAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CBF7262010C8FA0064FAF2 /* CloundantAdapter.swift */; };
 		C7DDD6682015D7FF00521C7A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DDD6672015D7FF00521C7A /* CameraViewController.swift */; };
+		C7F9861F2018696600707E78 /* AppLaunchAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F9861E2018696600707E78 /* AppLaunchAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B6BECF09D281B7ED26CD3C1E /* Pods-HealthWealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthWealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthWealth/Pods-HealthWealth.release.xcconfig"; sourceTree = "<group>"; };
-		C759A2E520126CAB001E1C60 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C719736A20185BED00B8CBA2 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		C759A2EF2013C049001E1C60 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		C759A2F120146B71001E1C60 /* DashBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewCell.swift; sourceTree = "<group>"; };
 		C75E9954200DEEB50065A76C /* HealthWealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthWealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +47,7 @@
 		C7934E6B20107C74005892EE /* BackgroundAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundAnimator.swift; sourceTree = "<group>"; };
 		C7CBF7262010C8FA0064FAF2 /* CloundantAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloundantAdapter.swift; sourceTree = "<group>"; };
 		C7DDD6672015D7FF00521C7A /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		C7F9861E2018696600707E78 /* AppLaunchAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchAdapter.swift; sourceTree = "<group>"; };
 		E3541C1EE534DE133F972AA6 /* Pods_HealthWealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HealthWealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1447A880DB6BBA13759CC32 /* Pods-HealthWealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthWealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthWealth/Pods-HealthWealth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,17 +95,18 @@
 			children = (
 				C7CBF7282010F8F50064FAF2 /* KolodaView */,
 				C75E9957200DEEB50065A76C /* AppDelegate.swift */,
+				C7F9861E2018696600707E78 /* AppLaunchAdapter.swift */,
 				C759A2EF2013C049001E1C60 /* DashBoardViewController.swift */,
 				C759A2F120146B71001E1C60 /* DashBoardTableViewCell.swift */,
 				C7CBF7262010C8FA0064FAF2 /* CloundantAdapter.swift */,
 				C75E9959200DEEB50065A76C /* LoginViewController.swift */,
 				C7934E5B200F22E1005892EE /* TokenStorage.swift */,
+				C7DDD6672015D7FF00521C7A /* CameraViewController.swift */,
+				C719736A20185BED00B8CBA2 /* MenuItems.swift */,
 				C75E995B200DEEB50065A76C /* Main.storyboard */,
 				C75E9960200DEEB50065A76C /* LaunchScreen.storyboard */,
 				C75E9963200DEEB50065A76C /* Info.plist */,
 				C7934E6320107999005892EE /* Images.xcassets */,
-				C759A2E520126CAB001E1C60 /* Utils.swift */,
-				C7DDD6672015D7FF00521C7A /* CameraViewController.swift */,
 			);
 			path = HealthWealth;
 			sourceTree = "<group>";
@@ -211,8 +214,11 @@
 				"${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/BluemixAppID/BluemixAppID.framework",
+				"${BUILT_PRODUCTS_DIR}/IBMAppLaunch/IBMAppLaunch.framework",
 				"${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftCloudant/SwiftCloudant.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -220,8 +226,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSAnalyticsAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BMSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BluemixAppID.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBMAppLaunch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Koloda.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCloudant.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +282,10 @@
 				C7934E6820107C52005892EE /* CustomView.swift in Sources */,
 				C7CBF7272010C8FA0064FAF2 /* CloundantAdapter.swift in Sources */,
 				C7934E6A20107C5C005892EE /* CustomOverlayView.swift in Sources */,
+				C7F9861F2018696600707E78 /* AppLaunchAdapter.swift in Sources */,
 				C75E995A200DEEB50065A76C /* LoginViewController.swift in Sources */,
 				C7DDD6682015D7FF00521C7A /* CameraViewController.swift in Sources */,
-				C759A2E620126CAB001E1C60 /* Utils.swift in Sources */,
+				C719736B20185BED00B8CBA2 /* MenuItems.swift in Sources */,
 				C7934E6620107BEE005892EE /* BackgroundAnimationViewController.swift in Sources */,
 				C759A2F02013C049001E1C60 /* DashBoardViewController.swift in Sources */,
 				C75E9958200DEEB50065A76C /* AppDelegate.swift in Sources */,

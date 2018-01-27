@@ -9,8 +9,9 @@
 import UIKit
 import BluemixAppID
 import BMSCore
+import NVActivityIndicatorView
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, NVActivityIndicatorViewable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,32 +33,64 @@ class LoginViewController: UIViewController {
         }
         
         func onAuthorizationSuccess(accessToken: AccessToken?, identityToken: IdentityToken?, response: Response?) {
-            
+            viewController.showOverlay()
             if (accessToken?.isAnonymous)! {
                 TokenStorageManager.sharedInstance.storeToken(token: accessToken?.raw)
             } else {
                 TokenStorageManager.sharedInstance.clearStoredToken()
             }
-            TokenStorageManager.sharedInstance.storeUserId(userId: accessToken?.subject)
-            let name = identityToken?.name != nil ? identityToken?.name : ""
-            if (name?.lowercased().starts(with: "v"))! {
-                DashBoardViewController.menuItems = ["Today's Appointments","Review Submissions","Nearest Hospitals","First Aid Guide","Daily Dose","Emergency","Donate Organs"]
-            }
-            let mainView  = UIApplication.shared.keyWindow?.rootViewController
-            let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationView") as! UINavigationController
-            DispatchQueue.main.async {
-                mainView?.present(afterLoginView, animated: true, completion: nil)
-                }
+            
+            let mailID = identityToken?.email != nil ? identityToken?.email : ""
+            let name = identityToken?.name != nil ? identityToken?.name : (accessToken?.subject != nil ? accessToken?.subject : "guest")
+            TokenStorageManager.sharedInstance.storeUserId(userId: name)
            
+            CloudantAdapter.sharedInstance.isDoctor(mailID!) { (resp) in
+                var userType = ""
+                if(resp) {
+                    MenuItems.isDoctorFlagEnabled = true
+                    userType = "doctor"
+                } else {
+                    userType = "normal"
+                }
+                self.viewController.changeOverlayMessage("Initializing AppLaunch..")
+                AppLaunchAdapter.sharedInstance.initialize(username: name!, userType: userType, completionHandler: { (Success, Failure) in
+                    if (Success != nil) {
+                        self.viewController.checkForEnabledFeatures({ (resp) in
+                           self.viewController.changeOverlayMessage("Preparing DashBoard..")
+                            CloudantAdapter.sharedInstance.createDocument(TokenStorageManager.sharedInstance.loadUserId()!,  { (response) in
+                                if(response) {
+                                    if AppLaunchAdapter.sharedInstance.isSubmissionMenuEnabled() && MenuItems.isDoctorFlagEnabled {
+                                        self.viewController.changeOverlayMessage("Loading Images")
+                                        CloudantAdapter.sharedInstance.getImages{(response) in
+                                            self.viewController.removeOverlay()
+                                            self.viewController.displayDashBoardView()
+                                        }
+                                    } else {
+                                        self.viewController.removeOverlay()
+                                        self.viewController.displayDashBoardView()
+                                    }
+                                }
+                            })
+                        })
+                    }
+                    else {
+                        self.viewController.removeOverlay()
+                        let alert = UIAlertController(title: "Alert", message: "AppLaunch Service Intialization Failed, Try again some", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                        self.viewController.present(alert, animated: true)
+                    }
+                })
+            }
         }
-       
         
         public func onAuthorizationCanceled() {
             print("cancel")
+            self.viewController.removeOverlay()
         }
         
         public func onAuthorizationFailure(error: AuthorizationError) {
             print(error)
+            self.viewController.removeOverlay()
         }
     }
     @IBAction func login_anonymously(_ sender: AnyObject) {
@@ -69,6 +102,40 @@ class LoginViewController: UIViewController {
         let token = TokenStorageManager.sharedInstance.loadStoredToken()
         AppID.sharedInstance.loginWidget?.launch(accessTokenString: token, delegate: delegate(viewController: self))
         
+    }
+    
+    internal func checkForEnabledFeatures(_ completionHandler:@escaping ((Bool) -> Void)) {
+        if(AppLaunchAdapter.sharedInstance.isOnlineEyeTestMenuEnabled()) {
+            MenuItems.addOnlineEyeTestFeature(name: AppLaunchAdapter.sharedInstance.getOnlineEyeTestMenuName())
+        }
+        if(AppLaunchAdapter.sharedInstance.isSubmissionMenuEnabled() && MenuItems.isDoctorFlagEnabled) {
+            MenuItems.addReviewFeature(name: AppLaunchAdapter.sharedInstance.getSubmissionMenuName())
+        }
+        let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+             completionHandler(true)
+        }
+    }
+    
+    internal func showOverlay() {
+        let size = CGSize(width: 30, height: 30)
+        startAnimating(size, message: "Loading...", type: .lineScale)
+    }
+    
+    internal func changeOverlayMessage(_ message: String) {
+        NVActivityIndicatorPresenter.sharedInstance.setMessage(message)
+    }
+    
+    internal func removeOverlay() {
+        self.stopAnimating()
+    }
+    
+    internal func displayDashBoardView() {
+        let mainView  = UIApplication.shared.keyWindow?.rootViewController
+        let afterLoginView  = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationView") as! UINavigationController
+        DispatchQueue.main.async {
+            mainView?.present(afterLoginView, animated: true, completion: nil)
+        }
     }
 
 

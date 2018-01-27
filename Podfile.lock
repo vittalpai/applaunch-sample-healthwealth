@@ -4,24 +4,36 @@ PODS:
   - BMSAnalyticsAPI (2.2.3)
   - BMSCore (2.3.5):
     - BMSAnalyticsAPI (~> 2.2)
+  - IBMAppLaunch (1.1.0):
+    - BMSCore (~> 2.0)
+    - SwiftyJSON (~> 4.0.0)
   - Koloda (4.3.1):
     - pop (~> 1.0)
+  - NVActivityIndicatorView (4.1.1):
+    - NVActivityIndicatorView/Presenter (= 4.1.1)
+  - NVActivityIndicatorView/Presenter (4.1.1)
   - pop (1.0.10)
   - SwiftCloudant (0.7.0)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - BluemixAppID
+  - IBMAppLaunch
   - Koloda
+  - NVActivityIndicatorView
   - SwiftCloudant
 
 SPEC CHECKSUMS:
   BluemixAppID: fff1538e4a29c695539c466dc3395fbe9f1bd9d8
   BMSAnalyticsAPI: d259379069bb11d2ff365bf5b796a2677dfc3849
   BMSCore: 446c16a7dbe14b5019751617a00dd947c65cca82
+  IBMAppLaunch: de985864234cd34a43fdf4fc9ec048cd99134cdd
   Koloda: 0d39b2aa188ccd1fac48d752acaf9802e683c625
+  NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SwiftCloudant: aa907d56a97f80181c6dc572ed7fdb8dc5e5d124
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 3b714724d6b8a3f0d4d58b2e182068aa720b3cb6
+PODFILE CHECKSUM: 5b7fa858ae5230f3c27695686644d6fa434a47f3
 
 COCOAPODS: 1.3.1

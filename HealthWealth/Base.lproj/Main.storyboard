@@ -316,7 +316,7 @@
                                     <constraint firstAttribute="height" constant="400" id="wGT-kb-y2u"/>
                                     <constraint firstAttribute="width" constant="343" id="xUz-gz-CSF"/>
                                 </constraints>
-                                <mutableString key="text">Test your eyes and get report from our leading opthamologists for completely free. Kindly take picture of your iris and send it to us. Our doctors will review and get back to you with the report.
+                                <string key="text">Test your eyes and get report from our leading opthamologists for completely free. Kindly take picture of your iris and send it to us. Our doctors will review and get back to you with the report.
 
 Instructions to capture image :
 
@@ -324,7 +324,7 @@ Instructions to capture image :
 • Stand sideways from any window (facing the window will cause glare).
 • Have someone else hold the camera or Use front camera to capture picture.
 • Hold the upper and lower eyelids open to make entire iris visible.
-• Keep the eye close to the camera and capture picture.</mutableString>
+• Keep the eye close to the camera and capture picture.</string>
                                 <color key="textColor" red="0.075269670050761461" green="0.075269670050761461" blue="0.075269670050761461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>

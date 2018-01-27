@@ -105,16 +105,22 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BluemixAppID/BluemixAppID.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IBMAppLaunch/IBMAppLaunch.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftCloudant/SwiftCloudant.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BMSAnalyticsAPI/BMSAnalyticsAPI.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BMSCore/BMSCore.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BluemixAppID/BluemixAppID.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IBMAppLaunch/IBMAppLaunch.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftCloudant/SwiftCloudant.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/pop/pop.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

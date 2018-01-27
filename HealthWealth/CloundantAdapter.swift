@@ -30,7 +30,7 @@ internal class CloudantAdapter {
                     }
                 })
             } else {
-                print("Created document \(response?["id"]) with revision id \(response?["rev"])")
+                print("Created document \(String(describing: response?["id"])) with revision id \(String(describing: response?["rev"]))")
                 completionHandler(true)
             }
         }
@@ -50,7 +50,7 @@ internal class CloudantAdapter {
                                                                 print("Encountered an error while creating an attachment. Error:\(error)")
                                                                 completionHandler(false)
                                                             } else {
-                                                                print("Created attachment \(response?["id"]) with revision id \(response?["rev"])")
+                                                                print("Created attachment \(String(describing: response?["id"])) with revision id \(response?["rev"])")
                                                                 completionHandler(true)
                                                             }
                 }
@@ -82,6 +82,24 @@ internal class CloudantAdapter {
         
     }
     
+    
+    internal func isDoctor(_ username: String,_ completionHandler:@escaping ((Bool) -> Void)) {
+        let readID = GetDocumentOperation(id: "Doctors", databaseName: dbName) { (response, httpInfo, error) in
+            if let error = error {
+                print("Encountered an error while deleting a document. Error: \(error)")
+                completionHandler(false)
+            } else {
+                let resp:String = response?[username] != nil ?  response?[username] as! String : ""
+                if (resp.lowercased() == "enable") {
+                    completionHandler(true)
+                } else {
+                    completionHandler(false)
+                }
+            }
+        }
+        client.add(operation:readID)
+    }
+    
     private func getRevisionID(_ documentID: String, completionHandler:@escaping ((String) -> Void)) {
         let readID = GetDocumentOperation(id: documentID, databaseName: dbName) { (response, httpInfo, error) in
             if let error = error {
@@ -95,13 +113,12 @@ internal class CloudantAdapter {
     }
     
     internal func getImages(_ completionHandler:@escaping ((Bool) -> Void)) {
-        var view = QueryViewOperation(name: "all", designDocumentID: "getimages", databaseName: dbName, rowHandler: { (row) in
+        let view = QueryViewOperation(name: "all", designDocumentID: "getimages", databaseName: dbName, rowHandler: { (row) in
             let reteiveImage = ReadAttachmentOperation(name: "image", documentID: row["id"] as! String, databaseName: self.dbName){ (data, info, error) in
-                if let error = error {
+                if error != nil {
                     print("Error : Retreiving Image")
                 } else {
                     let image = UIImage(data: data!)!
-                    image.accessibilityIdentifier = "Asdfdsa"
                     self.images.append(image)
                 }
             }

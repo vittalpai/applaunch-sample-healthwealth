@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
-class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class CameraViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, NVActivityIndicatorViewable {
 
     var imagePicker: UIImagePickerController!
     
@@ -32,32 +33,49 @@ class CameraViewController: UIViewController, UINavigationControllerDelegate, UI
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
-        Utils.showOverlay(self)
+        self.showOverlay()
         let image = info[UIImagePickerControllerOriginalImage] as? UIImage!
         CloudantAdapter.sharedInstance.addImage(TokenStorageManager.sharedInstance.loadUserId()!, (image?.resized(withPercentage: 0.1)!.pngRepresentationData!)!,{ (response) in
-            Utils.dismissOverlay(self)
+            self.removeOverlay()
             if(response) {
                 let alert = UIAlertController(title: "Alert", message: "Successfully uploaded image for review. We will get back to you shortly.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
                      self.navigationController?.popViewController(animated: true)
-                    //            let alert = UIAlertController(title: "Eye Image Submission Instructions", message: ", preferredStyle: .alert)
-                    //            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:  captureImage))
-                    //            self.present(alert, animated: true)
                 }))
                 self.present(alert, animated: true)
             }
         })
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    internal func showOverlay() {
+        let size = CGSize(width: 30, height: 30)
+        startAnimating(size, message: "Uploading Image...", type: .lineScale)
     }
-    */
+    
+    internal func removeOverlay() {
+        self.stopAnimating()
+    }
 
+}
+
+
+extension UIImage {
+    func resized(withPercentage percentage: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: size.width * percentage, height: size.height * percentage)
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    func resized(toWidth width: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    
+    var pngRepresentationData: Data? {
+        return UIImagePNGRepresentation(self)
+    }
 }

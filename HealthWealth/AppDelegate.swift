@@ -19,10 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
-        let region = AppID.REGION_US_SOUTH
+        let region = AppID.REGION_UK
         let bmsclient = BMSClient.sharedInstance
-        let backendGUID = "31a9611a-0aa0-43cb-b754-aadc37f786be"
+        let backendGUID = "526f39b5-7dfb-4db9-ad26-3e10af256e00"
         bmsclient.initialize(bluemixRegion: region)
         let appid = AppID.sharedInstance
         appid.initialize(tenantId: backendGUID, bluemixRegion: region)
