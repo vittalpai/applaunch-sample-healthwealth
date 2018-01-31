@@ -56,6 +56,7 @@ internal class MenuItems:NSObject  {
     }
     
     class func resetMenu() {
+        TokenStorageManager.sharedInstance.clearStoredToken()
         isDoctorFlagEnabled = false
         onlineEyeTestFeatureName = "Online Eye Checkup"
         reviewSubmissionsFeatureName = "Review Submissions"

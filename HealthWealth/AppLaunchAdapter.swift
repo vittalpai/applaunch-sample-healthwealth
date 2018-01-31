@@ -67,6 +67,22 @@ internal class AppLaunchAdapter {
         }
     }
     
+    internal func displayMessage() {
+        do {
+            try AppLaunch.sharedInstance.displayMessage()
+        } catch {
+            
+        }
+    }
+    
+    internal func sendMetrics(value: String) {
+        do {
+            try AppLaunch.sharedInstance.sendMetrics(codes: [value])
+        } catch {
+            
+        }
+    }
+    
     
     internal func destroy() {
         AppLaunch.sharedInstance.destroy { (Success, Failure) in

@@ -8,12 +8,18 @@
 
 import UIKit
 import NVActivityIndicatorView
+import IBMAppLaunch
 
 class DashBoardViewController: UITableViewController, NVActivityIndicatorViewable
 {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 130
+        let when = DispatchTime.now() + 4 // change 2 to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            AppLaunchAdapter.sharedInstance.displayMessage()
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,6 +45,7 @@ class DashBoardViewController: UITableViewController, NVActivityIndicatorViewabl
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(MenuItems.getMenuItems()[indexPath.row] == "Online Eye Checkup") {
+             AppLaunchAdapter.sharedInstance.sendMetrics(value: "_awbeicwyj")
             performSegue(withIdentifier: "examineEye", sender: self)
         } else if (MenuItems.getMenuItems()[indexPath.row] == "Review Submissions") {
             if (CloudantAdapter.sharedInstance.images.count != 0) {
@@ -56,46 +63,11 @@ class DashBoardViewController: UITableViewController, NVActivityIndicatorViewabl
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
-    static var isDoctorFlagEnabled: Bool = false
-    static var onlineEyeTestFeatureName: String = "Online Eye Checkup"
-    static var reviewSubmissionsFeatureName: String = "Review Submissions"
-    static var backgroundColor: UIColor =  hexStringToUIColor("#FEC058")
-    
-    static var normalMenu:[String] = [
-        "About My Doctor",
-        "Nearest Hospitals",
-        "Prescriptions",
-        "My Medicines",
-        "First Aid Guide",
-        "Daily Dose",
-        "Emergency",
-        "Donate Organs"]
-    
-    static var doctorMenu:[String] = [
-        "Today's Appointments",
-        "Nearest Hospitals",
-        "First Aid Guide",
-        "Daily Dose",
-        "Emergency",
-        "Donate Organs"]
+   
     @IBAction func logout(_ sender: Any) {
         MenuItems.resetMenu()
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginBarView") as! UINavigationController
-        self.present(vc, animated: true, completion: nil)
-    }
-    
-    internal func showOverlay() {
-        let size = CGSize(width: 30, height: 30)
-        startAnimating(size, message: "Loading...", type: .lineScale)
-    }
-    
-    internal func changeOverlayMessage(_ message: String) {
-        NVActivityIndicatorPresenter.sharedInstance.setMessage(message)
-    }
-    
-    internal func removeOverlay() {
-        self.stopAnimating()
+        self.dismiss(animated: true, completion: {})
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

@@ -121,10 +121,7 @@ class LoginViewController: UIViewController, NVActivityIndicatorViewable {
         if(AppLaunchAdapter.sharedInstance.isBackgroundColorChanged()) {
             MenuItems.changeBackgroundColor(color: AppLaunchAdapter.sharedInstance.getBackGroundColor())
         }
-        let when = DispatchTime.now() + 1 // change 2 to desired number of seconds
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            completionHandler(true)
-        }
+        completionHandler(true)
     }
     
     internal func showOverlay() {
